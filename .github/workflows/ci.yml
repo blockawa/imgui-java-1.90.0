@@ -37,7 +37,6 @@ jobs:
           chmod +x gradlew
           ./gradlew buildAll
 
-      # This helps to upload only jar files into the build artifact
       - name: Copy Build Results to Temp
         run: |
           mkdir -p tmp/
@@ -50,53 +49,6 @@ jobs:
         with:
           name: java-libraries
           path: tmp/*.jar
-
-  build-natives:
-    name: Build Native (${{ matrix.target.os }} - ${{ matrix.target.type }})
-    needs: build-java
-    strategy:
-      fail-fast: false
-      matrix:
-        target:
-          - os: ubuntu-latest
-            type: linux
-          - os: ubuntu-latest
-            type: windows
-          - os: macos-latest
-            type: macos
-    runs-on: ${{ matrix.target.os }}
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: liberica
-          java-version: |
-            8
-            17
-
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
-
-      - name: Install Dependencies (for Windows build)
-        if: matrix.target.type == 'windows'
-        run: sudo apt install mingw-w64
-
-      - name: Build
-        run: |
-          chmod +x gradlew
-          chmod +x buildSrc/scripts/build.sh
-          buildSrc/scripts/build.sh ${{ matrix.target.type }}
-
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: native-library-${{ matrix.target.type }}
-          path: /tmp/imgui/dst/
 
   build-android:
     name: Build Native (android-arm64)
@@ -140,11 +92,10 @@ jobs:
           name: native-library-android-arm64
           path: /tmp/imgui/dst/
 
-  # This required to pack all native libraries into single archive
   archive-natives:
     name: Archive Natives
     runs-on: ubuntu-latest
-    needs: [build-natives, build-android]
+    needs: build-android
     steps:
       - name: Merge Artifacts
         uses: actions/upload-artifact/merge@v4
@@ -154,7 +105,7 @@ jobs:
 
   update-bin:
     name: Update Binaries
-    if: github.ref == 'refs/heads/main' && !github.event.repository.fork # runs only on the main branch and not forks (sometimes people do PRs from the main branch)
+    if: github.ref == 'refs/heads/main' && !github.event.repository.fork
     runs-on: ubuntu-latest
     needs: archive-natives
     steps:
@@ -166,10 +117,6 @@ jobs:
         with:
           path: /tmp/artifacts
 
-      # Job compares sha1 hash of the imgui-binding/src/main directory.
-      # If there are any changes, then we update native libraries.
-      # We do not rely on git in terms of comparing binaries,
-      # since DLL files will always have versioning difference.
       - name: Compare Binding Hash
         id: cmp-binding-hash
         continue-on-error: true
@@ -178,7 +125,6 @@ jobs:
           cat bin/binding.sha1 > /tmp/hash
           find imgui-binding/src/main -type f -print0 | sort -z | xargs -0 sha1sum > bin/binding.sha1
           find imgui-binding/src/generated -type f -print0 | sort -z | xargs -0 sha1sum >> bin/binding.sha1
-          find include -type f -print0 | sort -z | xargs -0 sha1sum >> bin/binding.sha1
           cmp /tmp/hash bin/binding.sha1
 
       - name: Update
@@ -194,7 +140,7 @@ jobs:
 
   release:
     name: Release
-    if: startsWith(github.ref, 'refs/tags/v') # if tag starts with "v"
+    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     needs: [ build-java, archive-natives ]
     steps:

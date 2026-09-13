@@ -31,47 +31,6 @@ fi
 cd $LIBDIR || exit 1
 echo "FreeType unzipped to $LIBDIR"
 
-# Common configuration flags
-COMMON_FLAGS="--enable-static --disable-shared --without-zlib --without-bzip2 --without-png --without-harfbuzz --without-brotli"
-
-# Function to configure and build FreeType
-build_freetype() {
-    cflags=$1
-    prefix=$2
-    output_dir=$3
-
-    echo "Cleaning previous builds..."
-    make clean
-
-    echo "Configuring FreeType with CFLAGS='$cflags' and PREFIX='$prefix'..."
-    ./configure CFLAGS="$cflags" $COMMON_FLAGS $prefix
-    if [ $? -ne 0 ]; then
-        echo "Failed to configure FreeType"
-        exit 1
-    fi
-
-    echo "Building FreeType..."
-    make
-    if [ $? -ne 0 ]; then
-        echo "Failed to build FreeType"
-        exit 1
-    fi
-
-    echo "Checking if the generated library exists..."
-    if [ ! -f objs/.libs/libfreetype.a ]; then
-        echo "File objs/.libs/libfreetype.a not found!"
-        exit 1
-    fi
-
-    echo "Copying the generated library to $output_dir..."
-    cp objs/.libs/libfreetype.a "$output_dir"
-    if [ $? -ne 0 ]; then
-        echo "Failed to copy library to $output_dir"
-        exit 1
-    fi
-    echo "Library copied to $output_dir"
-}
-
 # Function to build FreeType using CMake (for cross-compilation targets like Android)
 build_freetype_cmake() {
     cmake_flags=$1
@@ -118,26 +77,6 @@ mkdir -p lib tmp
 
 # Determine build process based on vendor type
 case "$VTYPE" in
-    windows)
-        build_freetype "" "--host=x86_64-w64-mingw32 --prefix=/usr/x86_64-w64-mingw32" "lib/libfreetype.a"
-        ;;
-    linux)
-        build_freetype "-fPIC" "" "lib/libfreetype.a"
-        ;;
-    macos)
-        MACOS_VERSION=10.15
-
-        build_freetype "-arch x86_64 -mmacosx-version-min=$MACOS_VERSION" "" "tmp/libfreetype-x86_64.a"
-        build_freetype "-arch arm64 -mmacosx-version-min=$MACOS_VERSION" "" "tmp/libfreetype-arm64.a"
-
-        echo "Creating universal library using lipo..."
-        lipo -create -output lib/libfreetype.a tmp/libfreetype-x86_64.a tmp/libfreetype-arm64.a
-        if [ $? -ne 0 ]; then
-            echo "Failed to create universal library with lipo"
-            exit 1
-        fi
-        echo "Universal library created at lib/libfreetype.a"
-        ;;
     android-arm64)
         if [ -z "$ANDROID_NDK_HOME" ]; then
             echo "ANDROID_NDK_HOME is not set"
