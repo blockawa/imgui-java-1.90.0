@@ -33,7 +33,9 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Build
-        run: ./gradlew buildAll
+        run: |
+          chmod +x gradlew
+          ./gradlew buildAll
 
       # This helps to upload only jar files into the build artifact
       - name: Copy Build Results to Temp
