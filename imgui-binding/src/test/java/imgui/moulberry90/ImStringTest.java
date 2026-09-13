@@ -1,6 +1,6 @@
-package imgui;
+package imgui.moulberry90;
 
-import imgui.type.ImString;
+import imgui.moulberry90.type.ImString;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 

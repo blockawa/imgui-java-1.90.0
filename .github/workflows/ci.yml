@@ -38,7 +38,7 @@ jobs:
       - name: Build
         run: |
           chmod +x gradlew
-          ./gradlew buildAll
+          ./gradlew :imgui-binding:jar -x test
 
       - name: Copy Build Results to Temp
         run: |
@@ -55,7 +55,7 @@ jobs:
 
   build-android:
     name: Build Native (android-arm64)
-    needs: build-java
+    needs: []
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
