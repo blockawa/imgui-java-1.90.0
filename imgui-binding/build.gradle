@@ -46,11 +46,11 @@ tasks.register('generateJni') {
     dependsOn classes
     doLast {
         def outputDir = System.getProperty('jniOutputDir', "${buildDir}/jni")
-        new NativeCodeGenerator().generate(
-            file('src/generated/java'),
-            file("${buildDir}/classes/java/main"),
-            file(outputDir)
-        )
+        def sourceDir = file('src/generated/java').absolutePath
+        def srcMainDir = file('src/main/java').absolutePath
+        def classpathDir = file("${buildDir}/classes/java/main").absolutePath
+        new NativeCodeGenerator().generate(sourceDir, classpathDir, outputDir)
+        new NativeCodeGenerator().generate(srcMainDir, classpathDir, outputDir)
         println "Generated JNI C++ files to: $outputDir"
     }
 }
