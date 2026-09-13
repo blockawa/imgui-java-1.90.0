@@ -67,6 +67,9 @@ case "$VTYPE" in
         find imgui-binding/src/generated/java -name '*.java' > /tmp/java_sources.txt
         javac -h $JNI_DIR -sourcepath imgui-binding/src/generated/java:imgui-binding/src/main/java @/tmp/java_sources.txt 2>/dev/null || true
 
+        echo "Applying vendor patches..."
+        patch -p1 -d include/imgui-node-editor < patches/imgui-node-editor-imgui-1.92-operator-star.patch || true
+
         echo "Copying ImGui source files..."
         cp include/imgui/*.h include/imgui/*.cpp $JNI_DIR/
         cp include/imnodes/*.h include/imnodes/*.cpp $JNI_DIR/
