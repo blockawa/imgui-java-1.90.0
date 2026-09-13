@@ -116,8 +116,7 @@ public final class ImGuiPlatformIO extends ImGuiStruct {
             if (platformCallback##name != NULL) {\
                 env->DeleteGlobalRef(platformCallback##name);\
             }\
-            platformCallback##name = env->NewGlobalRef(func);\/* removed: 
-        /* removed: Platform viewport callback not in imgui 1.93 */
+            platformCallback##name = env->NewGlobalRef(func);
      */
 
     /**
@@ -167,8 +166,7 @@ public final class ImGuiPlatformIO extends ImGuiStruct {
             if (platformCallback##name != NULL) {\
                 env->DeleteGlobalRef(platformCallback##name);\
             }\
-            platformCallback##name = env->NewGlobalRef(func);\/* removed: 
-        /* removed: Platform viewport callback not in imgui 1.93 */
+            platformCallback##name = env->NewGlobalRef(func);
      */
 
     /**
@@ -198,8 +196,7 @@ public final class ImGuiPlatformIO extends ImGuiStruct {
             if (platformCallback##name != NULL) {\
                 env->DeleteGlobalRef(platformCallback##name);\
             }\
-            platformCallback##name = env->NewGlobalRef(func);\/* removed: 
-        /* removed: Platform viewport callback not in imgui 1.93 */
+            platformCallback##name = env->NewGlobalRef(func);
      */
 
     /**
@@ -260,8 +257,7 @@ public final class ImGuiPlatformIO extends ImGuiStruct {
             if (platformCallback##name != NULL) {\
                 env->DeleteGlobalRef(platformCallback##name);\
             }\
-            platformCallback##name = env->NewGlobalRef(func);\/* removed: 
-        /* removed: Platform viewport callback not in imgui 1.93 */
+            platformCallback##name = env->NewGlobalRef(func);
      */
 
     /**
@@ -301,7 +297,6 @@ public final class ImGuiPlatformIO extends ImGuiStruct {
             env->DeleteGlobalRef(platformCallbackSetWindowTitle);
         }
         platformCallbackSetWindowTitle = env->NewGlobalRef(func);
-        /* removed: IMGUI_PLATFORM_IO->Platform_SetWindowTitle = PlatformStubSetWindowTitle; */
     */
 
     /*JNI
@@ -323,7 +318,6 @@ public final class ImGuiPlatformIO extends ImGuiStruct {
             env->DeleteGlobalRef(platformCallbackSetWindowAlpha);
         }
         platformCallbackSetWindowAlpha = env->NewGlobalRef(func);
-        /* removed: IMGUI_PLATFORM_IO->Platform_SetWindowAlpha = PlatformStubSetWindowAlpha; */
     */
 
     /*JNI
@@ -379,7 +373,6 @@ public final class ImGuiPlatformIO extends ImGuiStruct {
             env->DeleteGlobalRef(platformCallbackGetWindowDpiScale);
         }
         platformCallbackGetWindowDpiScale = env->NewGlobalRef(func);
-        /* removed: IMGUI_PLATFORM_IO->Platform_GetWindowDpiScale = PlatformStubGetWindowDpiScale; */
     */
 
     /*JNI
@@ -415,8 +408,7 @@ public final class ImGuiPlatformIO extends ImGuiStruct {
             if (rendererCallback##name != NULL) {\
                 env->DeleteGlobalRef(rendererCallback##name);\
             }\
-            rendererCallback##name = env->NewGlobalRef(func);\/* removed: 
-        /* removed: Renderer viewport callback not in imgui 1.93 */
+            rendererCallback##name = env->NewGlobalRef(func);
      */
 
     /**
@@ -457,7 +449,6 @@ public final class ImGuiPlatformIO extends ImGuiStruct {
             env->DeleteGlobalRef(rendererCallbackSetWindowSize);
         }
         rendererCallbackSetWindowSize = env->NewGlobalRef(func);
-        /* removed: IMGUI_PLATFORM_IO->Renderer_SetWindowSize = RendererStubSetWindowSize; */
     */
 
     /*JNI
