@@ -55,20 +55,6 @@ case "$VTYPE" in
         rm -rf /tmp/imgui/android-arm64-build
         mkdir -p $JNI_DIR
 
-        echo "Regenerating AST from current imgui headers..."
-        mkdir -p include/imguizmo
-        ln -sf src/ImGuizmo.h include/imguizmo/ImGuizmo.h
-        ./gradlew generateAst || {
-            echo "ERROR: generateAst failed"
-            exit 1
-        }
-
-        echo "Regenerating Java API bindings..."
-        ./gradlew :imgui-binding:generateApi || {
-            echo "ERROR: generateApi failed"
-            exit 1
-        }
-
         echo "Generating JNI C++ sources..."
         ./gradlew :imgui-binding:classes || {
             echo "ERROR: Gradle classes task failed"
