@@ -499,7 +499,7 @@ public final class ImPlot {
 
     private static native void nSetupAxisTicks(int axis, double[] values, int nTicks, String[] obj_labels, int labelsCount); /*MANUAL
         auto values = obj_values == NULL ? NULL : (double*)env->GetPrimitiveArrayCritical(obj_values, JNI_FALSE);
-        const char* labels[labelsCount];
+        const char** labels = new const char*[labelsCount];
         for (int i = 0; i < labelsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labels, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -511,11 +511,12 @@ public final class ImPlot {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labels, i);
             env->ReleaseStringUTFChars(str, labels[i]);
         };
+        delete[] labels;
     */
 
     private static native void nSetupAxisTicks(int axis, double[] values, int nTicks, String[] obj_labels, int labelsCount, boolean keepDefault); /*MANUAL
         auto values = obj_values == NULL ? NULL : (double*)env->GetPrimitiveArrayCritical(obj_values, JNI_FALSE);
-        const char* labels[labelsCount];
+        const char** labels = new const char*[labelsCount];
         for (int i = 0; i < labelsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labels, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -527,6 +528,7 @@ public final class ImPlot {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labels, i);
             env->ReleaseStringUTFChars(str, labels[i]);
         };
+        delete[] labels;
     */
 
     private static native void nSetupAxisTicks(int axis, double[] values, int nTicks, boolean keepDefault); /*MANUAL
@@ -572,7 +574,7 @@ public final class ImPlot {
     */
 
     private static native void nSetupAxisTicks(int axis, double vMin, double vMax, int nTicks, String[] obj_labels, int labelsCount); /*MANUAL
-        const char* labels[labelsCount];
+        const char** labels = new const char*[labelsCount];
         for (int i = 0; i < labelsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labels, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -583,10 +585,11 @@ public final class ImPlot {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labels, i);
             env->ReleaseStringUTFChars(str, labels[i]);
         };
+        delete[] labels;
     */
 
     private static native void nSetupAxisTicks(int axis, double vMin, double vMax, int nTicks, String[] obj_labels, int labelsCount, boolean keepDefault); /*MANUAL
-        const char* labels[labelsCount];
+        const char** labels = new const char*[labelsCount];
         for (int i = 0; i < labelsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labels, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -597,6 +600,7 @@ public final class ImPlot {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labels, i);
             env->ReleaseStringUTFChars(str, labels[i]);
         };
+        delete[] labels;
     */
 
     private static native void nSetupAxisTicks(int axis, double vMin, double vMax, int nTicks, boolean keepDefault); /*
@@ -8073,7 +8077,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, short[] values, int groupCount); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8084,12 +8088,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, short[] values, int groupCount, double groupSize); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8100,12 +8105,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, short[] values, int groupCount, double groupSize, double shift); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8116,12 +8122,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, short[] values, int groupCount, double groupSize, double shift, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8132,7 +8139,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -8165,7 +8173,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, int[] values, int groupCount); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8176,12 +8184,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, int[] values, int groupCount, double groupSize); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8192,12 +8201,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, int[] values, int groupCount, double groupSize, double shift); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8208,12 +8218,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, int[] values, int groupCount, double groupSize, double shift, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8224,7 +8235,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -8257,7 +8269,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, long[] values, int groupCount); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8268,12 +8280,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, long[] values, int groupCount, double groupSize); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8284,12 +8297,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, long[] values, int groupCount, double groupSize, double shift); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8300,12 +8314,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, long[] values, int groupCount, double groupSize, double shift, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8316,7 +8331,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -8349,7 +8365,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, float[] values, int groupCount); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8360,12 +8376,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, float[] values, int groupCount, double groupSize); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8376,12 +8393,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, float[] values, int groupCount, double groupSize, double shift); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8392,12 +8410,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, float[] values, int groupCount, double groupSize, double shift, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8408,7 +8427,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -8441,7 +8461,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, double[] values, int groupCount); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8452,12 +8472,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, double[] values, int groupCount, double groupSize); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8468,12 +8489,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, double[] values, int groupCount, double groupSize, double shift); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8484,12 +8506,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroups(String[] obj_labelIds, int labelIdsCount, double[] values, int groupCount, double groupSize, double shift, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8500,7 +8523,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -8533,7 +8557,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, short[] values, int itemCount, int groupCount); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8544,12 +8568,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, short[] values, int itemCount, int groupCount, double groupSize); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8560,12 +8585,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, short[] values, int itemCount, int groupCount, double groupSize, double shift); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8576,12 +8602,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, short[] values, int itemCount, int groupCount, double groupSize, double shift, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8592,7 +8619,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -8625,7 +8653,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, int[] values, int itemCount, int groupCount); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8636,12 +8664,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, int[] values, int itemCount, int groupCount, double groupSize); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8652,12 +8681,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, int[] values, int itemCount, int groupCount, double groupSize, double shift); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8668,12 +8698,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, int[] values, int itemCount, int groupCount, double groupSize, double shift, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8684,7 +8715,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -8717,7 +8749,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, long[] values, int itemCount, int groupCount); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8728,12 +8760,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, long[] values, int itemCount, int groupCount, double groupSize); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8744,12 +8777,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, long[] values, int itemCount, int groupCount, double groupSize, double shift); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8760,12 +8794,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, long[] values, int itemCount, int groupCount, double groupSize, double shift, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8776,7 +8811,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -8809,7 +8845,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, float[] values, int itemCount, int groupCount); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8820,12 +8856,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, float[] values, int itemCount, int groupCount, double groupSize); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8836,12 +8873,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, float[] values, int itemCount, int groupCount, double groupSize, double shift); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8852,12 +8890,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, float[] values, int itemCount, int groupCount, double groupSize, double shift, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8868,7 +8907,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -8901,7 +8941,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, double[] values, int itemCount, int groupCount); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8912,12 +8952,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, double[] values, int itemCount, int groupCount, double groupSize); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8928,12 +8969,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, double[] values, int itemCount, int groupCount, double groupSize, double shift); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8944,12 +8986,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotBarGroupsV(String[] obj_labelIds, int labelIdsCount, double[] values, int itemCount, int groupCount, double groupSize, double shift, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -8960,7 +9003,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -12234,7 +12278,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, short[] values, double x, double y, double radius); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12245,12 +12289,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, short[] values, double x, double y, double radius, String labelFmt); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12262,13 +12307,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, short[] values, double x, double y, double radius, String labelFmt, double angle0); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12280,13 +12326,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, short[] values, double x, double y, double radius, String labelFmt, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12298,13 +12345,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, short[] values, double x, double y, double radius, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12315,7 +12363,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -12355,7 +12404,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, int[] values, double x, double y, double radius); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12366,12 +12415,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, int[] values, double x, double y, double radius, String labelFmt); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12383,13 +12433,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, int[] values, double x, double y, double radius, String labelFmt, double angle0); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12401,13 +12452,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, int[] values, double x, double y, double radius, String labelFmt, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12419,13 +12471,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, int[] values, double x, double y, double radius, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12436,7 +12489,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -12476,7 +12530,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, long[] values, double x, double y, double radius); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12487,12 +12541,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, long[] values, double x, double y, double radius, String labelFmt); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12504,13 +12559,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, long[] values, double x, double y, double radius, String labelFmt, double angle0); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12522,13 +12578,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, long[] values, double x, double y, double radius, String labelFmt, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12540,13 +12597,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, long[] values, double x, double y, double radius, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12557,7 +12615,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -12597,7 +12656,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, float[] values, double x, double y, double radius); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12608,12 +12667,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, float[] values, double x, double y, double radius, String labelFmt); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12625,13 +12685,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, float[] values, double x, double y, double radius, String labelFmt, double angle0); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12643,13 +12704,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, float[] values, double x, double y, double radius, String labelFmt, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12661,13 +12723,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, float[] values, double x, double y, double radius, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12678,7 +12741,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -12718,7 +12782,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, double[] values, double x, double y, double radius); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12729,12 +12793,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, double[] values, double x, double y, double radius, String labelFmt); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12746,13 +12811,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, double[] values, double x, double y, double radius, String labelFmt, double angle0); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12764,13 +12830,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, double[] values, double x, double y, double radius, String labelFmt, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12782,13 +12849,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChart(String[] obj_labelIds, int labelIdsCount, double[] values, double x, double y, double radius, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12799,7 +12867,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -12839,7 +12908,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, short[] values, int count, double x, double y, double radius); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12850,12 +12919,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, short[] values, int count, double x, double y, double radius, String labelFmt); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12867,13 +12937,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, short[] values, int count, double x, double y, double radius, String labelFmt, double angle0); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12885,13 +12956,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, short[] values, int count, double x, double y, double radius, String labelFmt, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12903,13 +12975,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, short[] values, int count, double x, double y, double radius, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12920,7 +12993,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -12960,7 +13034,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, int[] values, int count, double x, double y, double radius); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12971,12 +13045,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, int[] values, int count, double x, double y, double radius, String labelFmt); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -12988,13 +13063,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, int[] values, int count, double x, double y, double radius, String labelFmt, double angle0); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -13006,13 +13082,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, int[] values, int count, double x, double y, double radius, String labelFmt, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -13024,13 +13101,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, int[] values, int count, double x, double y, double radius, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -13041,7 +13119,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -13081,7 +13160,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, long[] values, int count, double x, double y, double radius); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -13092,12 +13171,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, long[] values, int count, double x, double y, double radius, String labelFmt); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -13109,13 +13189,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, long[] values, int count, double x, double y, double radius, String labelFmt, double angle0); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -13127,13 +13208,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, long[] values, int count, double x, double y, double radius, String labelFmt, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -13145,13 +13227,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, long[] values, int count, double x, double y, double radius, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -13162,7 +13245,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -13202,7 +13286,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, float[] values, int count, double x, double y, double radius); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -13213,12 +13297,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, float[] values, int count, double x, double y, double radius, String labelFmt); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -13230,13 +13315,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, float[] values, int count, double x, double y, double radius, String labelFmt, double angle0); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -13248,13 +13334,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, float[] values, int count, double x, double y, double radius, String labelFmt, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -13266,13 +13353,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, float[] values, int count, double x, double y, double radius, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -13283,7 +13371,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
@@ -13323,7 +13412,7 @@ public final class ImPlot {
     }
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, double[] values, int count, double x, double y, double radius); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -13334,12 +13423,13 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, double[] values, int count, double x, double y, double radius, String labelFmt); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -13351,13 +13441,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, double[] values, int count, double x, double y, double radius, String labelFmt, double angle0); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -13369,13 +13460,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, double[] values, int count, double x, double y, double radius, String labelFmt, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -13387,13 +13479,14 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
         if (labelFmt != NULL) env->ReleaseStringUTFChars(obj_labelFmt, labelFmt);
     */
 
     private static native void nPlotPieChartV(String[] obj_labelIds, int labelIdsCount, double[] values, int count, double x, double y, double radius, double angle0, int flags); /*MANUAL
-        const char* labelIds[labelIdsCount];
+        const char** labelIds = new const char*[labelIdsCount];
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -13404,7 +13497,8 @@ public final class ImPlot {
         for (int i = 0; i < labelIdsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_labelIds, i);
             env->ReleaseStringUTFChars(str, labelIds[i]);
-        };
+        }
+        delete[] labelIds;;
         if (values != NULL) env->ReleasePrimitiveArrayCritical(obj_values, values, JNI_FALSE);
     */
 

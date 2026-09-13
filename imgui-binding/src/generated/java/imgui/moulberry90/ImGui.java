@@ -3474,7 +3474,7 @@ public class ImGui {
     private static native boolean nCombo(String obj_label, int[] obj_currentItem, String[] obj_items, int itemsCount); /*MANUAL
         auto label = obj_label == NULL ? NULL : (char*)env->GetStringUTFChars(obj_label, JNI_FALSE);
         auto currentItem = obj_currentItem == NULL ? NULL : (int*)env->GetPrimitiveArrayCritical(obj_currentItem, JNI_FALSE);
-        const char* items[itemsCount];
+        const char** items = new const char*[itemsCount];
         for (int i = 0; i < itemsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_items, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -3487,13 +3487,14 @@ public class ImGui {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_items, i);
             env->ReleaseStringUTFChars(str, items[i]);
         };
+        delete[] items;
         return _result;
     */
 
     private static native boolean nCombo(String obj_label, int[] obj_currentItem, String[] obj_items, int itemsCount, int popupMaxHeightInItems); /*MANUAL
         auto label = obj_label == NULL ? NULL : (char*)env->GetStringUTFChars(obj_label, JNI_FALSE);
         auto currentItem = obj_currentItem == NULL ? NULL : (int*)env->GetPrimitiveArrayCritical(obj_currentItem, JNI_FALSE);
-        const char* items[itemsCount];
+        const char** items = new const char*[itemsCount];
         for (int i = 0; i < itemsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_items, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -3506,6 +3507,7 @@ public class ImGui {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_items, i);
             env->ReleaseStringUTFChars(str, items[i]);
         };
+        delete[] items;
         return _result;
     */
 
@@ -9664,7 +9666,7 @@ public class ImGui {
     private static native void nListBox(String label, int[] currentItem, String[] obj_items, int itemsCount); /*MANUAL
         auto label = obj_label == NULL ? NULL : (char*)env->GetStringUTFChars(obj_label, JNI_FALSE);
         auto currentItem = obj_currentItem == NULL ? NULL : (int*)env->GetPrimitiveArrayCritical(obj_currentItem, JNI_FALSE);
-        const char* items[itemsCount];
+        const char** items = new const char*[itemsCount];
         for (int i = 0; i < itemsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_items, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -9677,12 +9679,13 @@ public class ImGui {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_items, i);
             env->ReleaseStringUTFChars(str, items[i]);
         };
+        delete[] items;
     */
 
     private static native void nListBox(String label, int[] currentItem, String[] obj_items, int itemsCount, int heightInItems); /*MANUAL
         auto label = obj_label == NULL ? NULL : (char*)env->GetStringUTFChars(obj_label, JNI_FALSE);
         auto currentItem = obj_currentItem == NULL ? NULL : (int*)env->GetPrimitiveArrayCritical(obj_currentItem, JNI_FALSE);
-        const char* items[itemsCount];
+        const char** items = new const char*[itemsCount];
         for (int i = 0; i < itemsCount; i++) {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_items, i);
             auto rawStr = (char*)env->GetStringUTFChars(str, JNI_FALSE);
@@ -9695,6 +9698,7 @@ public class ImGui {
             const jstring str = (jstring)env->GetObjectArrayElement(obj_items, i);
             env->ReleaseStringUTFChars(str, items[i]);
         };
+        delete[] items;
     */
 
     // Widgets: Data Plotting
