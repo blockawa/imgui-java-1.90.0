@@ -55,10 +55,13 @@ case "$VTYPE" in
         rm -rf /tmp/imgui/android-arm64-build
         mkdir -p $JNI_DIR
 
-        echo "Generating JNI headers..."
+        echo "Generating JNI C++ sources..."
         ./gradlew :imgui-binding:classes 2>/dev/null || true
-        find imgui-binding/src/generated/java -name '*.java' > /tmp/java_sources.txt
-        javac -h $JNI_DIR -sourcepath imgui-binding/src/generated/java:imgui-binding/src/main/java @/tmp/java_sources.txt 2>/dev/null || true
+        ./gradlew :imgui-binding:generateJni -DjniOutputDir=$JNI_DIR 2>/dev/null || {
+            echo "Gradle generateJni failed, falling back to javac -h..."
+            find imgui-binding/src/generated/java -name '*.java' > /tmp/java_sources.txt
+            javac -h $JNI_DIR -sourcepath imgui-binding/src/generated/java:imgui-binding/src/main/java @/tmp/java_sources.txt 2>/dev/null || true
+        }
 
         echo "Applying vendor patches..."
         patch -p1 -d include/imgui-node-editor < patches/imgui-node-editor-imgui-1.92-operator-star.patch || true

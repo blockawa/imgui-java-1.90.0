@@ -1,3 +1,4 @@
+import com.badlogic.gdx.jnigen.NativeCodeGenerator
 import org.apache.tools.ant.filters.ReplaceTokens
 import tool.generator.GenerateLibs
 import tool.generator.api.task.GenerateApi
@@ -32,14 +33,26 @@ compileJava {
 }
 
 sourceSets {
-    main.java.srcDirs = ['src/generated/java']
-    raw.java.srcDirs = ['src/main/java']
+    main.java.srcDirs = ['src/generated/java', 'src/main/java']
 }
 
 tasks.register('generateApi', GenerateApi)
 
 tasks.register('generateLibs', GenerateLibs) {
     it.dependsOn assemble
+}
+
+tasks.register('generateJni') {
+    dependsOn classes
+    doLast {
+        def outputDir = System.getProperty('jniOutputDir', "${buildDir}/jni")
+        new NativeCodeGenerator().generate(
+            file('src/generated/java'),
+            file("${buildDir}/classes/java/main"),
+            file(outputDir)
+        )
+        println "Generated JNI C++ files to: $outputDir"
+    }
 }
 
 apply from: "$rootDir/publish.gradle"
