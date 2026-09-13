@@ -56,6 +56,8 @@ case "$VTYPE" in
         mkdir -p $JNI_DIR
 
         echo "Regenerating AST from current imgui headers..."
+        mkdir -p include/imguizmo
+        ln -sf src/ImGuizmo.h include/imguizmo/ImGuizmo.h
         ./gradlew generateAst || {
             echo "ERROR: generateAst failed"
             exit 1
