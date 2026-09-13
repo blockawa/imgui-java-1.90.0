@@ -61,12 +61,14 @@ case "$VTYPE" in
             exit 1
         }
         ./gradlew :imgui-binding:generateJni -DjniOutputDir=$JNI_DIR || {
-            echo "ERROR: NativeCodeGenerator failed to generate JNI C++ sources"
-            echo "Trying fallback: javac -h..."
-            find imgui-binding/src/generated/java -name '*.java' > /tmp/java_sources.txt
-            javac -h $JNI_DIR -sourcepath imgui-binding/src/generated/java:imgui-binding/src/main/java @/tmp/java_sources.txt 2>/dev/null || true
-            echo "WARNING: javac -h only generates headers, not implementations. Java_ symbols may be missing."
+            echo "ERROR: NativeCodeGenerator failed"
+            exit 1
         }
+        echo "Generated JNI .cpp files:"
+        ls $JNI_DIR/*.cpp 2>/dev/null | head -10
+
+        echo "Removing internal/ generated files (imgui API mismatch, not needed for Flashback)..."
+        rm -f $JNI_DIR/imgui_moulberry90_internal_*.cpp
 
         echo "Applying vendor patches..."
         patch -p1 -d include/imgui-node-editor < patches/imgui-node-editor-imgui-1.92-operator-star.patch || true
