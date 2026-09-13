@@ -103,7 +103,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v6
 
       - name: Setup Android SDK and NDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
         with:
           packages: 'ndk;30.0.16248370'
 
