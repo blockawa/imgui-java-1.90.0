@@ -89,6 +89,7 @@ jobs:
 
       - name: Build
         run: |
+          chmod +x gradlew
           chmod +x buildSrc/scripts/build.sh
           buildSrc/scripts/build.sh ${{ matrix.target.type }}
 
@@ -131,6 +132,7 @@ jobs:
 
       - name: Build
         run: |
+          chmod +x gradlew
           chmod +x buildSrc/scripts/build.sh
           buildSrc/scripts/build.sh android-arm64
 
