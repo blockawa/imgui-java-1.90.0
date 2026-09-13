@@ -56,7 +56,7 @@ case "$VTYPE" in
 
         CFLAGS="-fPIC -DIMGUI_ENABLE_FREETYPE -Ibuild/vendor/freetype/include"
         CXXFLAGS="$CFLAGS -std=c++17 -fno-exceptions -fno-rtti"
-        LDFLAGS="-Wl,--gc-sections -shared -s -Lbuild/vendor/freetype/lib -lfreetype"
+        LDFLAGS="-Wl,--gc-sections -shared -s -static-libstdc++ -Lbuild/vendor/freetype/lib -lfreetype"
 
         JNI_DIR=/tmp/imgui/android-arm64-build/jni
         rm -rf /tmp/imgui/android-arm64-build
