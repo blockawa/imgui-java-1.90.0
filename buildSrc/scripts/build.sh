@@ -67,11 +67,11 @@ case "$VTYPE" in
         cp include/imgui/*.h include/imgui/*.cpp $JNI_DIR/
         cp include/imnodes/*.h include/imnodes/*.cpp $JNI_DIR/
         cp include/imgui-node-editor/*.h include/imgui-node-editor/*.cpp include/imgui-node-editor/*.inl $JNI_DIR/
-        cp include/imguizmo/*.h include/imguizmo/*.cpp $JNI_DIR/
+        cp include/imguizmo/src/*.h include/imguizmo/src/*.cpp $JNI_DIR/ 2>/dev/null || true
         cp include/implot/*.h include/implot/*.cpp $JNI_DIR/
-        cp include/ImGuiColorTextEdit/*.h include/ImGuiColorTextEdit/*.cpp $JNI_DIR/
+        cp include/ImGuiColorTextEdit/*.h include/ImGuiColorTextEdit/*.cpp $JNI_DIR/ 2>/dev/null || true
         cp include/imgui_club/imgui_memory_editor/*.h $JNI_DIR/
-        cp include/imgui-knobs/*.h include/imgui-knobs/*.cpp $JNI_DIR/
+        cp include/imgui-knobs/*.h include/imgui-knobs/*.cpp $JNI_DIR/ 2>/dev/null || true
         cp imgui-binding/src/main/native/*.h imgui-binding/src/main/native/*.cpp $JNI_DIR/
 
         sed -i 's/#include "jni.h"/#include <jni.h>\n\n#ifndef JNI_VERSION_1_8\n#define JNI_VERSION_1_8 0x00010008\n#endif/g' $JNI_DIR/jni_jvm.h $JNI_DIR/jni_common.h

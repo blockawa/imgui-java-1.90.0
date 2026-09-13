@@ -52,8 +52,8 @@ case "$VTYPE" in
 
         $TOOLCHAIN/bin/llvm-strip $(pwd)/install/lib/libfreetype.a
 
-        mkdir -p ../../lib
-        cp $(pwd)/install/lib/libfreetype.a ../../lib/
+        mkdir -p lib
+        cp $(pwd)/install/lib/libfreetype.a lib/
         echo "FreeType built successfully"
         ;;
 
