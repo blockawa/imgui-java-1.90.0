@@ -184,6 +184,11 @@ struct MemoryEditor
         float   OffsetAsciiMaxX;
         float   WindowWidth;                // Ideal window width.
 
+        float   PosHexStart;
+        float   PosHexEnd;
+        float   PosAsciiStart;
+        float   PosAsciiEnd;
+
         Sizes() { memset(this, 0, sizeof(*this)); }
     };
 
@@ -209,6 +214,10 @@ struct MemoryEditor
             s.OffsetAsciiMaxX = s.OffsetAsciiMinX + Cols * s.GlyphWidth;
         }
         s.WindowWidth = s.OffsetAsciiMaxX + style.ScrollbarSize + style.WindowPadding.x * 2 + s.GlyphWidth;
+        s.PosHexStart = s.OffsetHexMinX;
+        s.PosHexEnd = s.OffsetHexMaxX;
+        s.PosAsciiStart = s.OffsetAsciiMinX;
+        s.PosAsciiEnd = s.OffsetAsciiMaxX;
     }
 
     // Standalone Memory Editor window
