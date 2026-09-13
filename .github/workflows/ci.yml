@@ -66,11 +66,10 @@ jobs:
             type: macos
     runs-on: ${{ matrix.target.os }}
     steps:
-      - name: Checkout Repository and Submodules
+      - name: Checkout Repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          submodules: recursive
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -104,11 +103,10 @@ jobs:
     needs: build-java
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository and Submodules
+      - name: Checkout Repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          submodules: recursive
 
       - name: Setup Java
         uses: actions/setup-java@v4
