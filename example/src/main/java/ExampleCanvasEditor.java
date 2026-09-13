@@ -1,9 +1,9 @@
-import imgui.*;
-import imgui.flag.ImGuiButtonFlags;
-import imgui.flag.ImGuiCond;
-import imgui.flag.ImGuiMouseButton;
-import imgui.flag.ImGuiPopupFlags;
-import imgui.type.ImBoolean;
+import imgui.moulberry90.*;
+import imgui.moulberry90.flag.ImGuiButtonFlags;
+import imgui.moulberry90.flag.ImGuiCond;
+import imgui.moulberry90.flag.ImGuiMouseButton;
+import imgui.moulberry90.flag.ImGuiPopupFlags;
+import imgui.moulberry90.type.ImBoolean;
 
 import java.util.ArrayList;
 import java.util.List;

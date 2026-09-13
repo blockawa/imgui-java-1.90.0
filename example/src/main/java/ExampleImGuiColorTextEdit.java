@@ -1,10 +1,10 @@
 /*
-import imgui.ImGui;
-import imgui.extension.texteditor.TextEditor;
-import imgui.extension.texteditor.TextEditorCoordinates;
-import imgui.extension.texteditor.TextEditorLanguageDefinition;
-import imgui.flag.ImGuiWindowFlags;
-import imgui.type.ImBoolean;
+import imgui.moulberry90.ImGui;
+import imgui.moulberry90.extension.texteditor.TextEditor;
+import imgui.moulberry90.extension.texteditor.TextEditorCoordinates;
+import imgui.moulberry90.extension.texteditor.TextEditorLanguageDefinition;
+import imgui.moulberry90.flag.ImGuiWindowFlags;
+import imgui.moulberry90.type.ImBoolean;
 
 import java.util.HashMap;
 import java.util.Map;

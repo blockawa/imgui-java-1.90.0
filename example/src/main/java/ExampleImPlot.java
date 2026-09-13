@@ -1,8 +1,8 @@
-import imgui.extension.implot.ImPlot;
-import imgui.extension.implot.ImPlotPoint;
-import imgui.flag.ImGuiCond;
-import imgui.internal.ImGui;
-import imgui.type.ImBoolean;
+import imgui.moulberry90.extension.implot.ImPlot;
+import imgui.moulberry90.extension.implot.ImPlotPoint;
+import imgui.moulberry90.flag.ImGuiCond;
+import imgui.moulberry90.internal.ImGui;
+import imgui.moulberry90.type.ImBoolean;
 
 import java.awt.Desktop;
 import java.net.URI;

@@ -1,12 +1,12 @@
-import imgui.ImGui;
-import imgui.extension.imguizmo.ImGuizmo;
-import imgui.extension.imguizmo.flag.Mode;
-import imgui.extension.imguizmo.flag.Operation;
-import imgui.flag.ImGuiCond;
-import imgui.flag.ImGuiInputTextFlags;
-import imgui.flag.ImGuiWindowFlags;
-import imgui.type.ImBoolean;
-import imgui.type.ImFloat;
+import imgui.moulberry90.ImGui;
+import imgui.moulberry90.extension.imguizmo.ImGuizmo;
+import imgui.moulberry90.extension.imguizmo.flag.Mode;
+import imgui.moulberry90.extension.imguizmo.flag.Operation;
+import imgui.moulberry90.flag.ImGuiCond;
+import imgui.moulberry90.flag.ImGuiInputTextFlags;
+import imgui.moulberry90.flag.ImGuiWindowFlags;
+import imgui.moulberry90.type.ImBoolean;
+import imgui.moulberry90.type.ImFloat;
 
 import java.awt.Desktop;
 import java.net.URI;

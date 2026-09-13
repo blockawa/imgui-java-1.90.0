@@ -1,10 +1,10 @@
 /*
-import imgui.extension.imguifiledialog.ImGuiFileDialog;
-import imgui.extension.imguifiledialog.callback.ImGuiFileDialogPaneFun;
-import imgui.extension.imguifiledialog.flag.ImGuiFileDialogFlags;
-import imgui.flag.ImGuiCond;
-import imgui.internal.ImGui;
-import imgui.type.ImBoolean;
+import imgui.moulberry90.extension.imguifiledialog.ImGuiFileDialog;
+import imgui.moulberry90.extension.imguifiledialog.callback.ImGuiFileDialogPaneFun;
+import imgui.moulberry90.extension.imguifiledialog.flag.ImGuiFileDialogFlags;
+import imgui.moulberry90.flag.ImGuiCond;
+import imgui.moulberry90.internal.ImGui;
+import imgui.moulberry90.type.ImBoolean;
 
 import java.awt.*;
 import java.net.URI;

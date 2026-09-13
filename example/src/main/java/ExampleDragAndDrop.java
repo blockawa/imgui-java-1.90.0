@@ -1,10 +1,10 @@
-import imgui.ImGui;
-import imgui.flag.ImGuiDragDropFlags;
-import imgui.flag.ImGuiInputTextFlags;
-import imgui.flag.ImGuiWindowFlags;
-import imgui.type.ImBoolean;
-import imgui.type.ImInt;
-import imgui.type.ImString;
+import imgui.moulberry90.ImGui;
+import imgui.moulberry90.flag.ImGuiDragDropFlags;
+import imgui.moulberry90.flag.ImGuiInputTextFlags;
+import imgui.moulberry90.flag.ImGuiWindowFlags;
+import imgui.moulberry90.type.ImBoolean;
+import imgui.moulberry90.type.ImInt;
+import imgui.moulberry90.type.ImString;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

@@ -1,13 +1,13 @@
-import imgui.ImFontConfig;
-import imgui.ImFontGlyphRangesBuilder;
-import imgui.ImGui;
-import imgui.ImGuiIO;
-import imgui.app.Application;
-import imgui.app.Configuration;
-import imgui.flag.ImGuiConfigFlags;
-import imgui.flag.ImGuiInputTextFlags;
-import imgui.flag.ImGuiWindowFlags;
-import imgui.type.ImString;
+import imgui.moulberry90.ImFontConfig;
+import imgui.moulberry90.ImFontGlyphRangesBuilder;
+import imgui.moulberry90.ImGui;
+import imgui.moulberry90.ImGuiIO;
+import imgui.moulberry90.app.Application;
+import imgui.moulberry90.app.Configuration;
+import imgui.moulberry90.flag.ImGuiConfigFlags;
+import imgui.moulberry90.flag.ImGuiInputTextFlags;
+import imgui.moulberry90.flag.ImGuiWindowFlags;
+import imgui.moulberry90.type.ImString;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

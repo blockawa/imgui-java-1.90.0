@@ -1,6 +1,6 @@
-import imgui.ImGui;
-import imgui.app.Application;
-import imgui.type.ImBoolean;
+import imgui.moulberry90.ImGui;
+import imgui.moulberry90.app.Application;
+import imgui.moulberry90.type.ImBoolean;
 
 public class Extra {
     private static final ImBoolean SHOW_DEMO_WINDOW = new ImBoolean(false);

@@ -1,12 +1,12 @@
-import imgui.ImVec2;
-import imgui.extension.nodeditor.NodeEditor;
-import imgui.extension.nodeditor.NodeEditorConfig;
-import imgui.extension.nodeditor.NodeEditorContext;
-import imgui.extension.nodeditor.flag.NodeEditorPinKind;
-import imgui.flag.ImGuiCond;
-import imgui.internal.ImGui;
-import imgui.type.ImBoolean;
-import imgui.type.ImLong;
+import imgui.moulberry90.ImVec2;
+import imgui.moulberry90.extension.nodeditor.NodeEditor;
+import imgui.moulberry90.extension.nodeditor.NodeEditorConfig;
+import imgui.moulberry90.extension.nodeditor.NodeEditorContext;
+import imgui.moulberry90.extension.nodeditor.flag.NodeEditorPinKind;
+import imgui.moulberry90.flag.ImGuiCond;
+import imgui.moulberry90.internal.ImGui;
+import imgui.moulberry90.type.ImBoolean;
+import imgui.moulberry90.type.ImLong;
 
 import java.awt.Desktop;
 import java.net.URI;
