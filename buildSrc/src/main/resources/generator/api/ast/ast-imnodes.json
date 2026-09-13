@@ -1,0 +1,1746 @@
+{
+  "info" : {
+    "source" : "include/imnodes/imnodes.h",
+    "hash" : "4ea12e1472e9f121b5084ac0b72237de",
+    "url" : "https://github.com/Nelarius/imnodes",
+    "revision" : "8563e1655bd9bb1f249e6552cc6274d506ee788b"
+  },
+  "decls" : [ {
+    "@type" : "AstEnumDecl",
+    "name" : "ImNodesCol_",
+    "decls" : [ {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_NodeBackground",
+      "qualType" : "ImNodesCol_",
+      "order" : 0,
+      "value" : "0",
+      "evaluatedValue" : 0
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_NodeBackgroundHovered",
+      "qualType" : "ImNodesCol_",
+      "order" : 1,
+      "evaluatedValue" : 1
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_NodeBackgroundSelected",
+      "qualType" : "ImNodesCol_",
+      "order" : 2,
+      "evaluatedValue" : 2
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_NodeOutline",
+      "qualType" : "ImNodesCol_",
+      "order" : 3,
+      "evaluatedValue" : 3
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_TitleBar",
+      "qualType" : "ImNodesCol_",
+      "order" : 4,
+      "evaluatedValue" : 4
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_TitleBarHovered",
+      "qualType" : "ImNodesCol_",
+      "order" : 5,
+      "evaluatedValue" : 5
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_TitleBarSelected",
+      "qualType" : "ImNodesCol_",
+      "order" : 6,
+      "evaluatedValue" : 6
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_Link",
+      "qualType" : "ImNodesCol_",
+      "order" : 7,
+      "evaluatedValue" : 7
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_LinkHovered",
+      "qualType" : "ImNodesCol_",
+      "order" : 8,
+      "evaluatedValue" : 8
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_LinkSelected",
+      "qualType" : "ImNodesCol_",
+      "order" : 9,
+      "evaluatedValue" : 9
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_Pin",
+      "qualType" : "ImNodesCol_",
+      "order" : 10,
+      "evaluatedValue" : 10
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_PinHovered",
+      "qualType" : "ImNodesCol_",
+      "order" : 11,
+      "evaluatedValue" : 11
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_BoxSelector",
+      "qualType" : "ImNodesCol_",
+      "order" : 12,
+      "evaluatedValue" : 12
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_BoxSelectorOutline",
+      "qualType" : "ImNodesCol_",
+      "order" : 13,
+      "evaluatedValue" : 13
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_GridBackground",
+      "qualType" : "ImNodesCol_",
+      "order" : 14,
+      "evaluatedValue" : 14
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_GridLine",
+      "qualType" : "ImNodesCol_",
+      "order" : 15,
+      "evaluatedValue" : 15
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_GridLinePrimary",
+      "qualType" : "ImNodesCol_",
+      "order" : 16,
+      "evaluatedValue" : 16
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_MiniMapBackground",
+      "qualType" : "ImNodesCol_",
+      "order" : 17,
+      "evaluatedValue" : 17
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_MiniMapBackgroundHovered",
+      "qualType" : "ImNodesCol_",
+      "order" : 18,
+      "evaluatedValue" : 18
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_MiniMapOutline",
+      "qualType" : "ImNodesCol_",
+      "order" : 19,
+      "evaluatedValue" : 19
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_MiniMapOutlineHovered",
+      "qualType" : "ImNodesCol_",
+      "order" : 20,
+      "evaluatedValue" : 20
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_MiniMapNodeBackground",
+      "qualType" : "ImNodesCol_",
+      "order" : 21,
+      "evaluatedValue" : 21
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_MiniMapNodeBackgroundHovered",
+      "qualType" : "ImNodesCol_",
+      "order" : 22,
+      "evaluatedValue" : 22
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_MiniMapNodeBackgroundSelected",
+      "qualType" : "ImNodesCol_",
+      "order" : 23,
+      "evaluatedValue" : 23
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_MiniMapNodeOutline",
+      "qualType" : "ImNodesCol_",
+      "order" : 24,
+      "evaluatedValue" : 24
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_MiniMapLink",
+      "qualType" : "ImNodesCol_",
+      "order" : 25,
+      "evaluatedValue" : 25
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_MiniMapLinkSelected",
+      "qualType" : "ImNodesCol_",
+      "order" : 26,
+      "evaluatedValue" : 26
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_MiniMapCanvas",
+      "qualType" : "ImNodesCol_",
+      "order" : 27,
+      "evaluatedValue" : 27
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_MiniMapCanvasOutline",
+      "qualType" : "ImNodesCol_",
+      "order" : 28,
+      "evaluatedValue" : 28
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesCol_COUNT",
+      "qualType" : "ImNodesCol_",
+      "order" : 29,
+      "evaluatedValue" : 29
+    } ]
+  }, {
+    "@type" : "AstEnumDecl",
+    "name" : "ImNodesStyleVar_",
+    "decls" : [ {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleVar_GridSpacing",
+      "qualType" : "ImNodesStyleVar_",
+      "order" : 0,
+      "value" : "0",
+      "evaluatedValue" : 0
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleVar_NodeCornerRounding",
+      "qualType" : "ImNodesStyleVar_",
+      "order" : 1,
+      "evaluatedValue" : 1
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleVar_NodePadding",
+      "qualType" : "ImNodesStyleVar_",
+      "order" : 2,
+      "evaluatedValue" : 2
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleVar_NodeBorderThickness",
+      "qualType" : "ImNodesStyleVar_",
+      "order" : 3,
+      "evaluatedValue" : 3
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleVar_LinkThickness",
+      "qualType" : "ImNodesStyleVar_",
+      "order" : 4,
+      "evaluatedValue" : 4
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleVar_LinkLineSegmentsPerLength",
+      "qualType" : "ImNodesStyleVar_",
+      "order" : 5,
+      "evaluatedValue" : 5
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleVar_LinkHoverDistance",
+      "qualType" : "ImNodesStyleVar_",
+      "order" : 6,
+      "evaluatedValue" : 6
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleVar_PinCircleRadius",
+      "qualType" : "ImNodesStyleVar_",
+      "order" : 7,
+      "evaluatedValue" : 7
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleVar_PinQuadSideLength",
+      "qualType" : "ImNodesStyleVar_",
+      "order" : 8,
+      "evaluatedValue" : 8
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleVar_PinTriangleSideLength",
+      "qualType" : "ImNodesStyleVar_",
+      "order" : 9,
+      "evaluatedValue" : 9
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleVar_PinLineThickness",
+      "qualType" : "ImNodesStyleVar_",
+      "order" : 10,
+      "evaluatedValue" : 10
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleVar_PinHoverRadius",
+      "qualType" : "ImNodesStyleVar_",
+      "order" : 11,
+      "evaluatedValue" : 11
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleVar_PinOffset",
+      "qualType" : "ImNodesStyleVar_",
+      "order" : 12,
+      "evaluatedValue" : 12
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleVar_MiniMapPadding",
+      "qualType" : "ImNodesStyleVar_",
+      "order" : 13,
+      "evaluatedValue" : 13
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleVar_MiniMapOffset",
+      "qualType" : "ImNodesStyleVar_",
+      "order" : 14,
+      "evaluatedValue" : 14
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleVar_COUNT",
+      "qualType" : "ImNodesStyleVar_",
+      "order" : 15,
+      "evaluatedValue" : 15
+    } ]
+  }, {
+    "@type" : "AstEnumDecl",
+    "name" : "ImNodesStyleFlags_",
+    "decls" : [ {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleFlags_None",
+      "qualType" : "ImNodesStyleFlags_",
+      "order" : 0,
+      "value" : "0",
+      "evaluatedValue" : 0
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleFlags_NodeOutline",
+      "qualType" : "ImNodesStyleFlags_",
+      "order" : 1,
+      "value" : "1 << 0",
+      "evaluatedValue" : 1
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleFlags_GridLines",
+      "qualType" : "ImNodesStyleFlags_",
+      "order" : 2,
+      "value" : "1 << 2",
+      "evaluatedValue" : 4
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleFlags_GridLinesPrimary",
+      "qualType" : "ImNodesStyleFlags_",
+      "order" : 3,
+      "value" : "1 << 3",
+      "evaluatedValue" : 8
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesStyleFlags_GridSnapping",
+      "qualType" : "ImNodesStyleFlags_",
+      "order" : 4,
+      "value" : "1 << 4",
+      "evaluatedValue" : 16
+    } ]
+  }, {
+    "@type" : "AstEnumDecl",
+    "name" : "ImNodesPinShape_",
+    "decls" : [ {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesPinShape_Circle",
+      "qualType" : "ImNodesPinShape_",
+      "order" : 0,
+      "evaluatedValue" : 0
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesPinShape_CircleFilled",
+      "qualType" : "ImNodesPinShape_",
+      "order" : 1,
+      "evaluatedValue" : 1
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesPinShape_Triangle",
+      "qualType" : "ImNodesPinShape_",
+      "order" : 2,
+      "evaluatedValue" : 2
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesPinShape_TriangleFilled",
+      "qualType" : "ImNodesPinShape_",
+      "order" : 3,
+      "evaluatedValue" : 3
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesPinShape_Quad",
+      "qualType" : "ImNodesPinShape_",
+      "order" : 4,
+      "evaluatedValue" : 4
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesPinShape_QuadFilled",
+      "qualType" : "ImNodesPinShape_",
+      "order" : 5,
+      "evaluatedValue" : 5
+    } ]
+  }, {
+    "@type" : "AstEnumDecl",
+    "name" : "ImNodesAttributeFlags_",
+    "decls" : [ {
+      "@type" : "AstFullComment",
+      "decls" : [ {
+        "@type" : "AstParagraphComment",
+        "decls" : [ {
+          "@type" : "AstTextComment",
+          "text" : " This enum controls the way the attribute pins behave."
+        } ]
+      } ]
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesAttributeFlags_None",
+      "qualType" : "ImNodesAttributeFlags_",
+      "order" : 0,
+      "value" : "0",
+      "evaluatedValue" : 0
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesAttributeFlags_EnableLinkDetachWithDragClick",
+      "docComment" : "Allow detaching a link by left-clicking and dragging the link at a pin it is connected to. NOTE: the user has to actually delete the link for this to work. A deleted link can be detected by calling IsLinkDestroyed() after EndNodeEditor().",
+      "qualType" : "ImNodesAttributeFlags_",
+      "order" : 1,
+      "value" : "1 << 0",
+      "evaluatedValue" : 1
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesAttributeFlags_EnableLinkCreationOnSnap",
+      "docComment" : "Visual snapping of an in progress link will trigger IsLink Created/Destroyed events. Allows for previewing the creation of a link while dragging it across attributes. See here for demo: https://github.com/Nelarius/imnodes/issues/41#issuecomment-647132113 NOTE: the user has to actually delete the link for this to work. A deleted link can be detected by calling IsLinkDestroyed() after EndNodeEditor().",
+      "qualType" : "ImNodesAttributeFlags_",
+      "order" : 2,
+      "value" : "1 << 1",
+      "evaluatedValue" : 2
+    } ]
+  }, {
+    "@type" : "AstRecordDecl",
+    "name" : "ImNodesIO",
+    "decls" : [ {
+      "@type" : "AstRecordDecl",
+      "name" : "EmulateThreeButtonMouse",
+      "decls" : [ {
+        "@type" : "AstFieldDecl",
+        "name" : "Modifier",
+        "qualType" : "const bool *",
+        "desugaredQualType" : "const bool *"
+      } ]
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "EmulateThreeButtonMouse",
+      "qualType" : "struct EmulateThreeButtonMouse",
+      "desugaredQualType" : "ImNodesIO::EmulateThreeButtonMouse"
+    }, {
+      "@type" : "AstRecordDecl",
+      "name" : "LinkDetachWithModifierClick",
+      "decls" : [ {
+        "@type" : "AstFieldDecl",
+        "name" : "Modifier",
+        "qualType" : "const bool *",
+        "desugaredQualType" : "const bool *"
+      } ]
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "LinkDetachWithModifierClick",
+      "qualType" : "struct LinkDetachWithModifierClick",
+      "desugaredQualType" : "ImNodesIO::LinkDetachWithModifierClick"
+    }, {
+      "@type" : "AstRecordDecl",
+      "name" : "MultipleSelectModifier",
+      "decls" : [ {
+        "@type" : "AstFieldDecl",
+        "name" : "Modifier",
+        "qualType" : "const bool *",
+        "desugaredQualType" : "const bool *"
+      } ]
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "MultipleSelectModifier",
+      "qualType" : "struct MultipleSelectModifier",
+      "desugaredQualType" : "ImNodesIO::MultipleSelectModifier"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "AltMouseButton",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "AutoPanningSpeed",
+      "qualType" : "float",
+      "desugaredQualType" : "float"
+    } ]
+  }, {
+    "@type" : "AstRecordDecl",
+    "name" : "ImNodesStyle",
+    "decls" : [ {
+      "@type" : "AstFieldDecl",
+      "name" : "GridSpacing",
+      "qualType" : "float",
+      "desugaredQualType" : "float"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "NodeCornerRounding",
+      "qualType" : "float",
+      "desugaredQualType" : "float"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "NodePadding",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "NodeBorderThickness",
+      "qualType" : "float",
+      "desugaredQualType" : "float"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "LinkThickness",
+      "qualType" : "float",
+      "desugaredQualType" : "float"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "LinkLineSegmentsPerLength",
+      "qualType" : "float",
+      "desugaredQualType" : "float"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "LinkHoverDistance",
+      "qualType" : "float",
+      "desugaredQualType" : "float"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "PinCircleRadius",
+      "qualType" : "float",
+      "desugaredQualType" : "float"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "PinQuadSideLength",
+      "qualType" : "float",
+      "desugaredQualType" : "float"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "PinTriangleSideLength",
+      "qualType" : "float",
+      "desugaredQualType" : "float"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "PinLineThickness",
+      "qualType" : "float",
+      "desugaredQualType" : "float"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "PinHoverRadius",
+      "qualType" : "float",
+      "desugaredQualType" : "float"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "PinOffset",
+      "qualType" : "float",
+      "desugaredQualType" : "float"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "MiniMapPadding",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "MiniMapOffset",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "Flags",
+      "qualType" : "ImNodesStyleFlags",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "Colors",
+      "qualType" : "unsigned int[29]",
+      "desugaredQualType" : "unsigned int[29]"
+    } ]
+  }, {
+    "@type" : "AstEnumDecl",
+    "name" : "ImNodesMiniMapLocation_",
+    "decls" : [ {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesMiniMapLocation_BottomLeft",
+      "qualType" : "ImNodesMiniMapLocation_",
+      "order" : 0,
+      "evaluatedValue" : 0
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesMiniMapLocation_BottomRight",
+      "qualType" : "ImNodesMiniMapLocation_",
+      "order" : 1,
+      "evaluatedValue" : 1
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesMiniMapLocation_TopLeft",
+      "qualType" : "ImNodesMiniMapLocation_",
+      "order" : 2,
+      "evaluatedValue" : 2
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImNodesMiniMapLocation_TopRight",
+      "qualType" : "ImNodesMiniMapLocation_",
+      "order" : 3,
+      "evaluatedValue" : 3
+    } ]
+  }, {
+    "@type" : "AstRecordDecl",
+    "name" : "ImNodesEditorContext",
+    "decls" : [ {
+      "@type" : "AstFullComment",
+      "decls" : [ {
+        "@type" : "AstParagraphComment",
+        "decls" : [ {
+          "@type" : "AstTextComment",
+          "text" : " An editor context corresponds to a set of nodes in a single workspace (created with a single"
+        }, {
+          "@type" : "AstTextComment",
+          "text" : " Begin/EndNodeEditor pair)"
+        } ]
+      }, {
+        "@type" : "AstParagraphComment",
+        "decls" : [ {
+          "@type" : "AstTextComment",
+          "text" : " By default, the library creates an editor context behind the scenes, so using any of the imnodes"
+        }, {
+          "@type" : "AstTextComment",
+          "text" : " functions doesn't require you to explicitly create a context."
+        } ]
+      } ]
+    } ]
+  }, {
+    "@type" : "AstNamespaceDecl",
+    "name" : "ImNodes",
+    "decls" : [ {
+      "@type" : "AstFunctionDecl",
+      "name" : "SetImGuiContext",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "ctx",
+        "qualType" : "ImGuiContext *",
+        "desugaredQualType" : "ImGuiContext *"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Call this function if you are compiling imnodes in to a dll, separate from ImGui. Calling this"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " function sets the GImGui global variable, which is not shared across dll boundaries."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "CreateContext",
+      "resultType" : "ImNodesContext *"
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "DestroyContext",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "ctx",
+        "qualType" : "ImNodesContext *",
+        "desugaredQualType" : "ImNodesContext *",
+        "defaultValue" : "NULL"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "GetCurrentContext",
+      "resultType" : "ImNodesContext *"
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SetCurrentContext",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "ctx",
+        "qualType" : "ImNodesContext *",
+        "desugaredQualType" : "ImNodesContext *"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "EditorContextCreate",
+      "resultType" : "ImNodesEditorContext *"
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "EditorContextFree",
+      "resultType" : "void"
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "EditorContextSet",
+      "resultType" : "void"
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "EditorContextGetPanning",
+      "resultType" : "ImVec2"
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "EditorContextResetPanning",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "pos",
+        "qualType" : "const ImVec2 &",
+        "desugaredQualType" : "const ImVec2 &"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "EditorContextMoveToNode",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "node_id",
+        "qualType" : "const int",
+        "desugaredQualType" : "const int"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "GetIO",
+      "resultType" : "ImNodesIO &"
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "GetStyle",
+      "resultType" : "ImNodesStyle &",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Returns the global style struct. See the struct declaration for default values."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "StyleColorsDark",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "dest",
+        "qualType" : "ImNodesStyle *",
+        "desugaredQualType" : "ImNodesStyle *",
+        "defaultValue" : "NULL"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Style presets matching the dear imgui styles of the same name. If dest is NULL, the active"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " context's ImNodesStyle instance will be used as the destination."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "StyleColorsClassic",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "dest",
+        "qualType" : "ImNodesStyle *",
+        "desugaredQualType" : "ImNodesStyle *",
+        "defaultValue" : "NULL"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "StyleColorsLight",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "dest",
+        "qualType" : "ImNodesStyle *",
+        "desugaredQualType" : "ImNodesStyle *",
+        "defaultValue" : "NULL"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "BeginNodeEditor",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " The top-level function call. Call this before calling BeginNode/EndNode. Calling this function"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " will result the node editor grid workspace being rendered."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "EndNodeEditor",
+      "resultType" : "void"
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "MiniMap",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "minimap_size_fraction",
+        "qualType" : "const float",
+        "desugaredQualType" : "const float",
+        "defaultValue" : "0.2f"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "location",
+        "qualType" : "const ImNodesMiniMapLocation",
+        "desugaredQualType" : "const int",
+        "defaultValue" : "ImNodesMiniMapLocation_TopLeft"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "node_hovering_callback",
+        "qualType" : "const ImNodesMiniMapNodeHoveringCallback",
+        "desugaredQualType" : "void (*const)(int, void *)",
+        "defaultValue" : "NULL"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "node_hovering_callback_data",
+        "qualType" : "const ImNodesMiniMapNodeHoveringCallbackUserData",
+        "desugaredQualType" : "void *const",
+        "defaultValue" : "NULL"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Add a navigable minimap to the editor; call before EndNodeEditor after all"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " nodes and links have been specified"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "PushColorStyle",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "item",
+        "qualType" : "ImNodesCol",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "color",
+        "qualType" : "unsigned int",
+        "desugaredQualType" : "unsigned int"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Use PushColorStyle and PopColorStyle to modify ImNodesStyle::Colors mid-frame."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "PopColorStyle",
+      "resultType" : "void"
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "PushStyleVar",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "style_item",
+        "qualType" : "ImNodesStyleVar",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "value",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "PushStyleVar",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "style_item",
+        "qualType" : "ImNodesStyleVar",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "value",
+        "qualType" : "const ImVec2 &",
+        "desugaredQualType" : "const ImVec2 &"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "PopStyleVar",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "count",
+        "qualType" : "int",
+        "desugaredQualType" : "int",
+        "defaultValue" : "1"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "BeginNode",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " id can be any positive or negative integer, but INT_MIN is currently reserved for internal use."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "EndNode",
+      "resultType" : "void"
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "GetNodeDimensions",
+      "resultType" : "ImVec2",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "BeginNodeTitleBar",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Place your node title bar content (such as the node title, using ImGui::Text) between the"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " following function calls. These functions have to be called before adding any attributes, or the"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " layout of the node will be incorrect."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "EndNodeTitleBar",
+      "resultType" : "void"
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "BeginInputAttribute",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "shape",
+        "qualType" : "ImNodesPinShape",
+        "desugaredQualType" : "int",
+        "defaultValue" : "ImNodesPinShape_CircleFilled"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Create an input attribute block. The pin is rendered on left side."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "EndInputAttribute",
+      "resultType" : "void"
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "BeginOutputAttribute",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "shape",
+        "qualType" : "ImNodesPinShape",
+        "desugaredQualType" : "int",
+        "defaultValue" : "ImNodesPinShape_CircleFilled"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Create an output attribute block. The pin is rendered on the right side."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "EndOutputAttribute",
+      "resultType" : "void"
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "BeginStaticAttribute",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Create a static attribute block. A static attribute has no pin, and therefore can't be linked to"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " anything. However, you can still use IsAttributeActive() and IsAnyAttributeActive() to check for"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " attribute activity."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "EndStaticAttribute",
+      "resultType" : "void"
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "PushAttributeFlag",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "flag",
+        "qualType" : "ImNodesAttributeFlags",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Push a single AttributeFlags value. By default, only AttributeFlags_None is set."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "PopAttributeFlag",
+      "resultType" : "void"
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "Link",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "start_attribute_id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "end_attribute_id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Render a link between attributes."
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " The attributes ids used here must match the ids used in Begin(Input|Output)Attribute function"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " calls. The order of start_attr and end_attr doesn't make a difference for rendering the link."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SetNodeDraggable",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "node_id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "draggable",
+        "qualType" : "const bool",
+        "desugaredQualType" : "const bool"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Enable or disable the ability to click and drag a specific node."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SetNodeScreenSpacePos",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "node_id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "screen_space_pos",
+        "qualType" : "const ImVec2 &",
+        "desugaredQualType" : "const ImVec2 &"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Use the following functions to get and set the node's coordinates in these coordinate systems."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SetNodeEditorSpacePos",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "node_id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "editor_space_pos",
+        "qualType" : "const ImVec2 &",
+        "desugaredQualType" : "const ImVec2 &"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SetNodeGridSpacePos",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "node_id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "grid_pos",
+        "qualType" : "const ImVec2 &",
+        "desugaredQualType" : "const ImVec2 &"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "GetNodeScreenSpacePos",
+      "resultType" : "ImVec2",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "node_id",
+        "qualType" : "const int",
+        "desugaredQualType" : "const int"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "GetNodeEditorSpacePos",
+      "resultType" : "ImVec2",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "node_id",
+        "qualType" : "const int",
+        "desugaredQualType" : "const int"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "GetNodeGridSpacePos",
+      "resultType" : "ImVec2",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "node_id",
+        "qualType" : "const int",
+        "desugaredQualType" : "const int"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SnapNodeToGrid",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "node_id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " If ImNodesStyleFlags_GridSnapping is enabled, snap the specified node's origin to the grid."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "IsEditorHovered",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Returns true if the current node editor canvas is being hovered over by the mouse, and is not"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " blocked by any other windows."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "IsNodeHovered",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "node_id",
+        "qualType" : "int *",
+        "desugaredQualType" : "int *"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " The following functions return true if a UI element is being hovered over by the mouse cursor."
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " Assigns the id of the UI element being hovered over to the function argument. Use these functions"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " after EndNodeEditor() has been called."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "IsLinkHovered",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "link_id",
+        "qualType" : "int *",
+        "desugaredQualType" : "int *"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "IsPinHovered",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "attribute_id",
+        "qualType" : "int *",
+        "desugaredQualType" : "int *"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "NumSelectedNodes",
+      "resultType" : "int",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Use The following two functions to query the number of selected nodes or links in the current"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " editor. Use after calling EndNodeEditor()."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "NumSelectedLinks",
+      "resultType" : "int"
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "GetSelectedNodes",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "node_ids",
+        "qualType" : "int *",
+        "desugaredQualType" : "int *"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Get the selected node/link ids. The pointer argument should point to an integer array with at"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " least as many elements as the respective NumSelectedNodes/NumSelectedLinks function call"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " returned."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "GetSelectedLinks",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "link_ids",
+        "qualType" : "int *",
+        "desugaredQualType" : "int *"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "ClearNodeSelection",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Clears the list of selected nodes/links. Useful if you want to delete a selected node or link."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "ClearLinkSelection",
+      "resultType" : "void"
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SelectNode",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "node_id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Use the following functions to add or remove individual nodes or links from the current editors"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " selection. Note that all functions require the id to be an existing valid id for this editor."
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " Select-functions has the precondition that the object is currently considered unselected."
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " Clear-functions has the precondition that the object is currently considered selected."
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " Preconditions listed above can be checked via IsNodeSelected/IsLinkSelected if not already"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " known."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "ClearNodeSelection",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "node_id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "IsNodeSelected",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "node_id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SelectLink",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "link_id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "ClearLinkSelection",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "link_id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "IsLinkSelected",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "link_id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "IsAttributeActive",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Was the previous attribute active? This will continuously return true while the left mouse button"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " is being pressed over the UI content of the attribute."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "IsAnyAttributeActive",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "attribute_id",
+        "qualType" : "int *",
+        "desugaredQualType" : "int *",
+        "defaultValue" : "NULL"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Was any attribute active? If so, sets the active attribute id to the output function argument."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "IsLinkStarted",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "started_at_attribute_id",
+        "qualType" : "int *",
+        "desugaredQualType" : "int *"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Did the user start dragging a new link from a pin?"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "IsLinkDropped",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "started_at_attribute_id",
+        "qualType" : "int *",
+        "desugaredQualType" : "int *",
+        "defaultValue" : "NULL"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "including_detached_links",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool",
+        "defaultValue" : "true"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Did the user drop the dragged link before attaching it to a pin?"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " There are two different kinds of situations to consider when handling this event:"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " 1) a link which is created at a pin and then dropped"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " 2) an existing link which is detached from a pin and then dropped"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " Use the including_detached_links flag to control whether this function triggers when the user"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " detaches a link and drops it."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "IsLinkCreated",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "started_at_attribute_id",
+        "qualType" : "int *",
+        "desugaredQualType" : "int *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "ended_at_attribute_id",
+        "qualType" : "int *",
+        "desugaredQualType" : "int *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "created_from_snap",
+        "qualType" : "bool *",
+        "desugaredQualType" : "bool *",
+        "defaultValue" : "NULL"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Did the user finish creating a new link?"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "IsLinkCreated",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "started_at_node_id",
+        "qualType" : "int *",
+        "desugaredQualType" : "int *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "started_at_attribute_id",
+        "qualType" : "int *",
+        "desugaredQualType" : "int *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "ended_at_node_id",
+        "qualType" : "int *",
+        "desugaredQualType" : "int *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "ended_at_attribute_id",
+        "qualType" : "int *",
+        "desugaredQualType" : "int *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "created_from_snap",
+        "qualType" : "bool *",
+        "desugaredQualType" : "bool *",
+        "defaultValue" : "NULL"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "IsLinkDestroyed",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "link_id",
+        "qualType" : "int *",
+        "desugaredQualType" : "int *"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Was an existing link detached from a pin by the user? The detached link's id is assigned to the"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " output argument link_id."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SaveCurrentEditorStateToIniString",
+      "resultType" : "const char *",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "data_size",
+        "qualType" : "size_t *",
+        "desugaredQualType" : "size_t *",
+        "defaultValue" : "NULL"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Use the following functions to write the editor context's state to a string, or directly to a"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " file. The editor context is serialized in the INI file format."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SaveEditorStateToIniString",
+      "resultType" : "const char *",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "editor",
+        "qualType" : "const ImNodesEditorContext *",
+        "desugaredQualType" : "const ImNodesEditorContext *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "data_size",
+        "qualType" : "size_t *",
+        "desugaredQualType" : "size_t *",
+        "defaultValue" : "NULL"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "LoadCurrentEditorStateFromIniString",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "data",
+        "qualType" : "const char *",
+        "desugaredQualType" : "const char *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "data_size",
+        "qualType" : "size_t",
+        "desugaredQualType" : "unsigned long"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "LoadEditorStateFromIniString",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "editor",
+        "qualType" : "ImNodesEditorContext *",
+        "desugaredQualType" : "ImNodesEditorContext *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "data",
+        "qualType" : "const char *",
+        "desugaredQualType" : "const char *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "data_size",
+        "qualType" : "size_t",
+        "desugaredQualType" : "unsigned long"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SaveCurrentEditorStateToIniFile",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "file_name",
+        "qualType" : "const char *",
+        "desugaredQualType" : "const char *"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SaveEditorStateToIniFile",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "editor",
+        "qualType" : "const ImNodesEditorContext *",
+        "desugaredQualType" : "const ImNodesEditorContext *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "file_name",
+        "qualType" : "const char *",
+        "desugaredQualType" : "const char *"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "LoadCurrentEditorStateFromIniFile",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "file_name",
+        "qualType" : "const char *",
+        "desugaredQualType" : "const char *"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "LoadEditorStateFromIniFile",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "editor",
+        "qualType" : "ImNodesEditorContext *",
+        "desugaredQualType" : "ImNodesEditorContext *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "file_name",
+        "qualType" : "const char *",
+        "desugaredQualType" : "const char *"
+      } ]
+    } ]
+  } ]
+}

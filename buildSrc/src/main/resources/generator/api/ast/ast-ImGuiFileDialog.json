@@ -1,0 +1,3244 @@
+{
+  "info" : {
+    "source" : "include/ImGuiFileDialog/ImGuiFileDialog.h",
+    "hash" : "11872045e07178b9875d166a203d0345",
+    "url" : "https://github.com/aiekick/ImGuiFileDialog",
+    "revision" : "007091af18c69a2eed15cf5016951eb481a1de79"
+  },
+  "decls" : [ {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswalnum_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswblank_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswalpha_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswhexnumber_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstRecordDecl",
+    "name" : "timespec",
+    "decls" : [ {
+      "@type" : "AstFieldDecl",
+      "name" : "tv_sec",
+      "qualType" : "__darwin_time_t",
+      "desugaredQualType" : "long"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "tv_nsec",
+      "qualType" : "long",
+      "desugaredQualType" : "long"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswcntrl_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswideogram_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswctype_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswnumber_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswdigit_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswphonogram_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswgraph_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswrune_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswlower_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswspecial_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswblank",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstRecordDecl",
+    "name" : "lconv",
+    "decls" : [ {
+      "@type" : "AstFieldDecl",
+      "name" : "decimal_point",
+      "qualType" : "char *",
+      "desugaredQualType" : "char *"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "thousands_sep",
+      "qualType" : "char *",
+      "desugaredQualType" : "char *"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "grouping",
+      "qualType" : "char *",
+      "desugaredQualType" : "char *"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "int_curr_symbol",
+      "qualType" : "char *",
+      "desugaredQualType" : "char *"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "currency_symbol",
+      "qualType" : "char *",
+      "desugaredQualType" : "char *"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "mon_decimal_point",
+      "qualType" : "char *",
+      "desugaredQualType" : "char *"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "mon_thousands_sep",
+      "qualType" : "char *",
+      "desugaredQualType" : "char *"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "mon_grouping",
+      "qualType" : "char *",
+      "desugaredQualType" : "char *"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "positive_sign",
+      "qualType" : "char *",
+      "desugaredQualType" : "char *"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "negative_sign",
+      "qualType" : "char *",
+      "desugaredQualType" : "char *"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "int_frac_digits",
+      "qualType" : "char",
+      "desugaredQualType" : "char"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "frac_digits",
+      "qualType" : "char",
+      "desugaredQualType" : "char"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "p_cs_precedes",
+      "qualType" : "char",
+      "desugaredQualType" : "char"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "p_sep_by_space",
+      "qualType" : "char",
+      "desugaredQualType" : "char"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "n_cs_precedes",
+      "qualType" : "char",
+      "desugaredQualType" : "char"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "n_sep_by_space",
+      "qualType" : "char",
+      "desugaredQualType" : "char"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "p_sign_posn",
+      "qualType" : "char",
+      "desugaredQualType" : "char"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "n_sign_posn",
+      "qualType" : "char",
+      "desugaredQualType" : "char"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "int_p_cs_precedes",
+      "qualType" : "char",
+      "desugaredQualType" : "char"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "int_n_cs_precedes",
+      "qualType" : "char",
+      "desugaredQualType" : "char"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "int_p_sep_by_space",
+      "qualType" : "char",
+      "desugaredQualType" : "char"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "int_n_sep_by_space",
+      "qualType" : "char",
+      "desugaredQualType" : "char"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "int_p_sign_posn",
+      "qualType" : "char",
+      "desugaredQualType" : "char"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "int_n_sign_posn",
+      "qualType" : "char",
+      "desugaredQualType" : "char"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswprint_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswascii",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswpunct_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswhexnumber",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswspace_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswideogram",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswupper_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswnumber",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswphonogram",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswxdigit_l",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "digittoint_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswrune",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "towlower_l",
+    "resultType" : "wint_t"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isalnum_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswspecial",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "towupper_l",
+    "resultType" : "wint_t"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isalpha_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isblank_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswalnum",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iscntrl_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswalpha",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isdigit_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswcntrl",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isgraph_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswctype",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "ishexnumber_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswdigit",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isideogram_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstRecordDecl",
+    "name" : "tm",
+    "decls" : [ {
+      "@type" : "AstFieldDecl",
+      "name" : "tm_sec",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "tm_min",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "tm_hour",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "tm_mday",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "tm_mon",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "tm_year",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "tm_wday",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "tm_yday",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "tm_isdst",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "tm_gmtoff",
+      "qualType" : "long",
+      "desugaredQualType" : "long"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "tm_zone",
+      "qualType" : "char *",
+      "desugaredQualType" : "char *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswgraph",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "islower_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswlower",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isnumber_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswprint",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isphonogram_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswpunct",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswspace",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isprint_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswupper",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "ispunct_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iswxdigit",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isrune_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "towlower",
+    "resultType" : "wint_t"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isspace_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "towupper",
+    "resultType" : "wint_t"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isspecial_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isupper_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isxdigit_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "tolower_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "toupper_l",
+    "resultType" : "int",
+    "decls" : [ {
+      "@type" : "AstParmVarDecl",
+      "name" : "c",
+      "qualType" : "int",
+      "desugaredQualType" : "int"
+    }, {
+      "@type" : "AstParmVarDecl",
+      "name" : "l",
+      "qualType" : "locale_t",
+      "desugaredQualType" : "struct _xlocale *"
+    } ]
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isascii",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "major",
+    "resultType" : "__int32_t"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "minor",
+    "resultType" : "__int32_t"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "makedev",
+    "resultType" : "dev_t"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isalnum",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isalpha",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isblank",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "iscntrl",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isdigit",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isgraph",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "islower",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isprint",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "ispunct",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isspace",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isupper",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isxdigit",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "toascii",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "tolower",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "toupper",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "digittoint",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "ishexnumber",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isideogram",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isnumber",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isphonogram",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isrune",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstFunctionDecl",
+    "name" : "isspecial",
+    "resultType" : "int"
+  }, {
+    "@type" : "AstEnumDecl",
+    "name" : "IGFD_FileStyleFlags_",
+    "decls" : [ {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "IGFD_FileStyle_None",
+      "docComment" : "define none style",
+      "qualType" : "IGFD_FileStyleFlags_",
+      "order" : 0,
+      "value" : "0",
+      "evaluatedValue" : 0
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "IGFD_FileStyleByTypeFile",
+      "docComment" : "define style for all files",
+      "qualType" : "IGFD_FileStyleFlags_",
+      "order" : 1,
+      "value" : "(1 << 0)",
+      "evaluatedValue" : 1
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "IGFD_FileStyleByTypeDir",
+      "docComment" : "define style for all dir",
+      "qualType" : "IGFD_FileStyleFlags_",
+      "order" : 2,
+      "value" : "(1 << 1)",
+      "evaluatedValue" : 2
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "IGFD_FileStyleByTypeLink",
+      "docComment" : "define style for all link",
+      "qualType" : "IGFD_FileStyleFlags_",
+      "order" : 3,
+      "value" : "(1 << 2)",
+      "evaluatedValue" : 4
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "IGFD_FileStyleByExtention",
+      "docComment" : "define style by extention, for files or links",
+      "qualType" : "IGFD_FileStyleFlags_",
+      "order" : 4,
+      "value" : "(1 << 3)",
+      "evaluatedValue" : 8
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "IGFD_FileStyleByFullName",
+      "docComment" : "define style for particular file/dir/link full name (filename + extention)",
+      "qualType" : "IGFD_FileStyleFlags_",
+      "order" : 5,
+      "value" : "(1 << 4)",
+      "evaluatedValue" : 16
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "IGFD_FileStyleByContainedInFullName",
+      "docComment" : "define style for file/dir/link when criteria is contained in full name",
+      "qualType" : "IGFD_FileStyleFlags_",
+      "order" : 6,
+      "value" : "(1 << 5)",
+      "evaluatedValue" : 32
+    } ]
+  }, {
+    "@type" : "AstEnumDecl",
+    "name" : "ImGuiFileDialogFlags_",
+    "decls" : [ {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImGuiFileDialogFlags_None",
+      "qualType" : "ImGuiFileDialogFlags_",
+      "order" : 0,
+      "value" : "0",
+      "evaluatedValue" : 0
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImGuiFileDialogFlags_ConfirmOverwrite",
+      "docComment" : "show confirm to overwrite dialog",
+      "qualType" : "ImGuiFileDialogFlags_",
+      "order" : 1,
+      "value" : "(1 << 0)",
+      "evaluatedValue" : 1
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImGuiFileDialogFlags_DontShowHiddenFiles",
+      "docComment" : "dont show hidden file (file starting with a .)",
+      "qualType" : "ImGuiFileDialogFlags_",
+      "order" : 2,
+      "value" : "(1 << 1)",
+      "evaluatedValue" : 2
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImGuiFileDialogFlags_DisableCreateDirectoryButton",
+      "docComment" : "disable the create directory button",
+      "qualType" : "ImGuiFileDialogFlags_",
+      "order" : 3,
+      "value" : "(1 << 2)",
+      "evaluatedValue" : 4
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImGuiFileDialogFlags_HideColumnType",
+      "docComment" : "hide column file type",
+      "qualType" : "ImGuiFileDialogFlags_",
+      "order" : 4,
+      "value" : "(1 << 3)",
+      "evaluatedValue" : 8
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImGuiFileDialogFlags_HideColumnSize",
+      "docComment" : "hide column file size",
+      "qualType" : "ImGuiFileDialogFlags_",
+      "order" : 5,
+      "value" : "(1 << 4)",
+      "evaluatedValue" : 16
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImGuiFileDialogFlags_HideColumnDate",
+      "docComment" : "hide column file date",
+      "qualType" : "ImGuiFileDialogFlags_",
+      "order" : 6,
+      "value" : "(1 << 5)",
+      "evaluatedValue" : 32
+    }, {
+      "@type" : "AstEnumConstantDecl",
+      "name" : "ImGuiFileDialogFlags_Default",
+      "qualType" : "ImGuiFileDialogFlags_",
+      "order" : 7,
+      "value" : "ImGuiFileDialogFlags_ConfirmOverwrite",
+      "evaluatedValue" : 1
+    } ]
+  }, {
+    "@type" : "AstNamespaceDecl",
+    "name" : "IGFD",
+    "decls" : [ {
+      "@type" : "AstRecordDecl",
+      "name" : "FileDialogInternal",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstRecordDecl",
+      "name" : "SearchManager",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          } ]
+        } ]
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puSearchTag",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puSearchBuffer",
+        "qualType" : "char[1024]",
+        "desugaredQualType" : "char[1024]"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puSearchInputIsActive",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "Clear",
+        "resultType" : "void"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "DrawSearchBar",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileDialogInternal",
+          "qualType" : "FileDialogInternal &",
+          "desugaredQualType" : "FileDialogInternal &"
+        } ]
+      } ]
+    }, {
+      "@type" : "AstRecordDecl",
+      "name" : "Utils",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          } ]
+        } ]
+      }, {
+        "@type" : "AstRecordDecl",
+        "name" : "PathStruct",
+        "decls" : [ {
+          "@type" : "AstFieldDecl",
+          "name" : "path",
+          "qualType" : "int",
+          "desugaredQualType" : "int"
+        }, {
+          "@type" : "AstFieldDecl",
+          "name" : "name",
+          "qualType" : "int",
+          "desugaredQualType" : "int"
+        }, {
+          "@type" : "AstFieldDecl",
+          "name" : "ext",
+          "qualType" : "int",
+          "desugaredQualType" : "int"
+        }, {
+          "@type" : "AstFieldDecl",
+          "name" : "isOk",
+          "qualType" : "bool",
+          "desugaredQualType" : "bool"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "Splitter",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "split_vertically",
+          "qualType" : "bool",
+          "desugaredQualType" : "bool"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "thickness",
+          "qualType" : "float",
+          "desugaredQualType" : "float"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "size1",
+          "qualType" : "float *",
+          "desugaredQualType" : "float *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "size2",
+          "qualType" : "float *",
+          "desugaredQualType" : "float *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "min_size1",
+          "qualType" : "float",
+          "desugaredQualType" : "float"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "min_size2",
+          "qualType" : "float",
+          "desugaredQualType" : "float"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "splitter_long_axis_size",
+          "qualType" : "float",
+          "desugaredQualType" : "float",
+          "defaultValue" : "-1.0f"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "ReplaceString",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "str",
+          "qualType" : "int &",
+          "desugaredQualType" : "int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "oldStr",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "newStr",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "IsDirectoryExist",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "name",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "CreateDirectoryIfNotExist",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "name",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "ParsePathFileName",
+        "resultType" : "PathStruct",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vPathFileName",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "AppendToBuffer",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vBuffer",
+          "qualType" : "char *",
+          "desugaredQualType" : "char *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vBufferLen",
+          "qualType" : "size_t",
+          "desugaredQualType" : "unsigned long"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vStr",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "ResetBuffer",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vBuffer",
+          "qualType" : "char *",
+          "desugaredQualType" : "char *"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "SetBuffer",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vBuffer",
+          "qualType" : "char *",
+          "desugaredQualType" : "char *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vBufferLen",
+          "qualType" : "size_t",
+          "desugaredQualType" : "unsigned long"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vStr",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "SplitStringToVector",
+        "resultType" : "int",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "text",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "delimiter",
+          "qualType" : "char",
+          "desugaredQualType" : "char"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "pushEmpty",
+          "qualType" : "bool",
+          "desugaredQualType" : "bool"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetDrivesList",
+        "resultType" : "int"
+      } ]
+    }, {
+      "@type" : "AstRecordDecl",
+      "name" : "FileStyle",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          } ]
+        } ]
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "color",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "icon",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "font",
+        "qualType" : "int *",
+        "desugaredQualType" : "int *"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "flags",
+        "qualType" : "IGFD_FileStyleFlags",
+        "desugaredQualType" : "int"
+      } ]
+    }, {
+      "@type" : "AstRecordDecl",
+      "name" : "FileInfos",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstRecordDecl",
+      "name" : "FilterManager",
+      "decls" : [ {
+        "@type" : "AstRecordDecl",
+        "name" : "FilterInfos",
+        "decls" : [ {
+          "@type" : "AstFieldDecl",
+          "name" : "filter",
+          "qualType" : "int",
+          "desugaredQualType" : "int"
+        }, {
+          "@type" : "AstFieldDecl",
+          "name" : "collectionfilters",
+          "qualType" : "int",
+          "desugaredQualType" : "int"
+        }, {
+          "@type" : "AstFunctionDecl",
+          "name" : "clear",
+          "resultType" : "void"
+        }, {
+          "@type" : "AstFunctionDecl",
+          "name" : "empty",
+          "resultType" : "bool"
+        }, {
+          "@type" : "AstFunctionDecl",
+          "name" : "exist",
+          "resultType" : "bool",
+          "decls" : [ {
+            "@type" : "AstParmVarDecl",
+            "name" : "vFilter",
+            "qualType" : "const int &",
+            "desugaredQualType" : "const int &"
+          } ]
+        } ]
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "prParsedFilters",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "prSelectedFilter",
+        "qualType" : "FilterInfos",
+        "desugaredQualType" : "IGFD::FilterManager::FilterInfos"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puDLGFilters",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puDLGdefaultExt",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "ParseFilters",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFilters",
+          "qualType" : "const char *",
+          "desugaredQualType" : "const char *"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "SetSelectedFilterWithExt",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFilter",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "prFillFileStyle",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileInfos",
+          "qualType" : "std::shared_ptr<FileInfos>",
+          "desugaredQualType" : "std::shared_ptr<IGFD::FileInfos>"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "SetFileStyle",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFlags",
+          "qualType" : "const IGFD_FileStyleFlags &",
+          "desugaredQualType" : "const IGFD_FileStyleFlags &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vCriteria",
+          "qualType" : "const char *",
+          "desugaredQualType" : "const char *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vInfos",
+          "qualType" : "const FileStyle &",
+          "desugaredQualType" : "const FileStyle &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "SetFileStyle",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFlags",
+          "qualType" : "const IGFD_FileStyleFlags &",
+          "desugaredQualType" : "const IGFD_FileStyleFlags &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vCriteria",
+          "qualType" : "const char *",
+          "desugaredQualType" : "const char *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vColor",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vIcon",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFont",
+          "qualType" : "int *",
+          "desugaredQualType" : "int *"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetFileStyle",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFlags",
+          "qualType" : "const IGFD_FileStyleFlags &",
+          "desugaredQualType" : "const IGFD_FileStyleFlags &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vCriteria",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vOutColor",
+          "qualType" : "int *",
+          "desugaredQualType" : "int *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vOutIcon",
+          "qualType" : "int *",
+          "desugaredQualType" : "int *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vOutFont",
+          "qualType" : "int **",
+          "desugaredQualType" : "int **"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "ClearFilesStyle",
+        "resultType" : "void"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "IsCoveredByFilters",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vTag",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "DrawFilterComboBox",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileDialogInternal",
+          "qualType" : "FileDialogInternal &",
+          "desugaredQualType" : "FileDialogInternal &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetSelectedFilter",
+        "resultType" : "FilterInfos"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "ReplaceExtentionWithCurrentFilter",
+        "resultType" : "int",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFile",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "SetDefaultFilterIfNotDefined",
+        "resultType" : "void"
+      } ]
+    }, {
+      "@type" : "AstRecordDecl",
+      "name" : "FileInfos",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          } ]
+        } ]
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "fileType",
+        "qualType" : "char",
+        "desugaredQualType" : "char"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "filePath",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "fileNameExt",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "fileNameExt_optimized",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "fileExt",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "fileSize",
+        "qualType" : "size_t",
+        "desugaredQualType" : "unsigned long"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "formatedFileSize",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "fileModifDate",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "fileStyle",
+        "qualType" : "std::shared_ptr<FileStyle>",
+        "desugaredQualType" : "std::shared_ptr<IGFD::FileStyle>"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "IsTagFound",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vTag",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      } ]
+    }, {
+      "@type" : "AstRecordDecl",
+      "name" : "FileManager",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          } ]
+        } ]
+      }, {
+        "@type" : "AstEnumDecl",
+        "name" : "SortingFieldEnum",
+        "decls" : [ {
+          "@type" : "AstEnumConstantDecl",
+          "name" : "FIELD_NONE",
+          "docComment" : "no sorting preference, result indetermined haha..",
+          "qualType" : "IGFD::FileManager::SortingFieldEnum",
+          "order" : 0,
+          "value" : "0",
+          "evaluatedValue" : 0
+        }, {
+          "@type" : "AstEnumConstantDecl",
+          "name" : "FIELD_FILENAME",
+          "docComment" : "sorted by filename",
+          "qualType" : "IGFD::FileManager::SortingFieldEnum",
+          "order" : 1,
+          "evaluatedValue" : 1
+        }, {
+          "@type" : "AstEnumConstantDecl",
+          "name" : "FIELD_TYPE",
+          "docComment" : "sorted by filetype",
+          "qualType" : "IGFD::FileManager::SortingFieldEnum",
+          "order" : 2,
+          "evaluatedValue" : 2
+        }, {
+          "@type" : "AstEnumConstantDecl",
+          "name" : "FIELD_SIZE",
+          "docComment" : "sorted by filesize (formated file size)",
+          "qualType" : "IGFD::FileManager::SortingFieldEnum",
+          "order" : 3,
+          "evaluatedValue" : 3
+        }, {
+          "@type" : "AstEnumConstantDecl",
+          "name" : "FIELD_DATE",
+          "docComment" : "sorted by filedate",
+          "qualType" : "IGFD::FileManager::SortingFieldEnum",
+          "order" : 4,
+          "evaluatedValue" : 4
+        } ]
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "prCurrentPath",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "prCurrentPathDecomposition",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "prFileList",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "prFilteredFileList",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "prLastSelectedFileName",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "prSelectedFileNames",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "prCreateDirectoryMode",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puVariadicBuffer",
+        "qualType" : "char[1024]",
+        "desugaredQualType" : "char[1024]"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puInputPathActivated",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puDrivesClicked",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puPathClicked",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puInputPathBuffer",
+        "qualType" : "char[1024]",
+        "desugaredQualType" : "char[1024]"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puFileNameBuffer",
+        "qualType" : "char[1024]",
+        "desugaredQualType" : "char[1024]"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puDirectoryNameBuffer",
+        "qualType" : "char[1024]",
+        "desugaredQualType" : "char[1024]"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puHeaderFileName",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puHeaderFileType",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puHeaderFileSize",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puHeaderFileDate",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puSortingDirection",
+        "qualType" : "bool[4]",
+        "desugaredQualType" : "bool[4]"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puSortingField",
+        "qualType" : "SortingFieldEnum",
+        "desugaredQualType" : "IGFD::FileManager::SortingFieldEnum"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puShowDrives",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puDLGpath",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puDLGDefaultFileName",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puDLGcountSelectionMax",
+        "qualType" : "size_t",
+        "desugaredQualType" : "unsigned long"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puDLGDirectoryMode",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puFsRoot",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "prRoundNumber",
+        "resultType" : "int",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vvalue",
+          "qualType" : "double",
+          "desugaredQualType" : "double"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "n",
+          "qualType" : "int",
+          "desugaredQualType" : "int"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "prFormatFileSize",
+        "resultType" : "int",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vByteSize",
+          "qualType" : "size_t",
+          "desugaredQualType" : "unsigned long"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "prOptimizeFilenameForSearchOperations",
+        "resultType" : "int",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileNameExt",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "prCompleteFileInfos",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "FileInfos",
+          "qualType" : "const std::shared_ptr<FileInfos> &",
+          "desugaredQualType" : "const std::shared_ptr<FileInfos> &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "prRemoveFileNameInSelection",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileName",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "prAddFileNameInSelection",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileName",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vSetLastSelectionFileName",
+          "qualType" : "bool",
+          "desugaredQualType" : "bool"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "AddFile",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileDialogInternal",
+          "qualType" : "const FileDialogInternal &",
+          "desugaredQualType" : "const FileDialogInternal &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vPath",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileName",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileType",
+          "qualType" : "const char &",
+          "desugaredQualType" : "const char &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "IsComposerEmpty",
+        "resultType" : "bool"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetComposerSize",
+        "resultType" : "size_t"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "IsFileListEmpty",
+        "resultType" : "bool"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "IsFilteredListEmpty",
+        "resultType" : "bool"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetFullFileListSize",
+        "resultType" : "size_t"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetFullFileAt",
+        "resultType" : "std::shared_ptr<FileInfos>",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vIdx",
+          "qualType" : "size_t",
+          "desugaredQualType" : "unsigned long"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetFilteredListSize",
+        "resultType" : "size_t"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetFilteredFileAt",
+        "resultType" : "std::shared_ptr<FileInfos>",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vIdx",
+          "qualType" : "size_t",
+          "desugaredQualType" : "unsigned long"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "IsFileNameSelected",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileName",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetBack",
+        "resultType" : "int"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "ClearComposer",
+        "resultType" : "void"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "ClearFileLists",
+        "resultType" : "void"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "ClearAll",
+        "resultType" : "void"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "ApplyFilteringOnFileList",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileDialogInternal",
+          "qualType" : "const FileDialogInternal &",
+          "desugaredQualType" : "const FileDialogInternal &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "OpenCurrentPath",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileDialogInternal",
+          "qualType" : "const FileDialogInternal &",
+          "desugaredQualType" : "const FileDialogInternal &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "SortFields",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileDialogInternal",
+          "qualType" : "const FileDialogInternal &",
+          "desugaredQualType" : "const FileDialogInternal &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vSortingField",
+          "qualType" : "const SortingFieldEnum &",
+          "desugaredQualType" : "const SortingFieldEnum &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vCanChangeOrder",
+          "qualType" : "const bool &",
+          "desugaredQualType" : "const bool &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetDrives",
+        "resultType" : "bool"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "CreateDir",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vPath",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "ComposeNewPath",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vIter",
+          "qualType" : "int",
+          "desugaredQualType" : "int"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "SetPathOnParentDirectoryIfAny",
+        "resultType" : "bool"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetCurrentPath",
+        "resultType" : "int"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "SetCurrentPath",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vCurrentPath",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "IsFileExist",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFile",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "SetDefaultFileName",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileName",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "SelectDirectory",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vInfos",
+          "qualType" : "const std::shared_ptr<FileInfos> &",
+          "desugaredQualType" : "const std::shared_ptr<FileInfos> &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "SelectFileName",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileDialogInternal",
+          "qualType" : "const FileDialogInternal &",
+          "desugaredQualType" : "const FileDialogInternal &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vInfos",
+          "qualType" : "const std::shared_ptr<FileInfos> &",
+          "desugaredQualType" : "const std::shared_ptr<FileInfos> &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "SetCurrentDir",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vPath",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstFullComment",
+          "decls" : [ {
+            "@type" : "AstParagraphComment",
+            "decls" : [ {
+              "@type" : "AstTextComment",
+              "text" : "depend of dirent.h"
+            } ]
+          } ]
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "ScanDir",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileDialogInternal",
+          "qualType" : "const FileDialogInternal &",
+          "desugaredQualType" : "const FileDialogInternal &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vPath",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetResultingPath",
+        "resultType" : "int"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetResultingFileName",
+        "resultType" : "int",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileDialogInternal",
+          "qualType" : "FileDialogInternal &",
+          "desugaredQualType" : "FileDialogInternal &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetResultingFilePathName",
+        "resultType" : "int",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileDialogInternal",
+          "qualType" : "FileDialogInternal &",
+          "desugaredQualType" : "FileDialogInternal &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetResultingSelection",
+        "resultType" : "int"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "DrawDirectoryCreation",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileDialogInternal",
+          "qualType" : "const FileDialogInternal &",
+          "desugaredQualType" : "const FileDialogInternal &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "DrawPathComposer",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileDialogInternal",
+          "qualType" : "const FileDialogInternal &",
+          "desugaredQualType" : "const FileDialogInternal &"
+        } ]
+      } ]
+    }, {
+      "@type" : "AstRecordDecl",
+      "name" : "ThumbnailFeature",
+      "decls" : [ {
+        "@type" : "AstFunctionDecl",
+        "name" : "NewThumbnailFrame",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileDialogInternal",
+          "qualType" : "FileDialogInternal &",
+          "desugaredQualType" : "FileDialogInternal &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "EndThumbnailFrame",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileDialogInternal",
+          "qualType" : "FileDialogInternal &",
+          "desugaredQualType" : "FileDialogInternal &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "QuitThumbnailFrame",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileDialogInternal",
+          "qualType" : "FileDialogInternal &",
+          "desugaredQualType" : "FileDialogInternal &"
+        } ]
+      } ]
+    }, {
+      "@type" : "AstRecordDecl",
+      "name" : "BookMarkFeature",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstRecordDecl",
+      "name" : "KeyExplorerFeature",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " file localization by input chat // widget flashing"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstRecordDecl",
+      "name" : "FileDialogInternal",
+      "decls" : [ {
+        "@type" : "AstFieldDecl",
+        "name" : "puFileManager",
+        "qualType" : "FileManager",
+        "desugaredQualType" : "IGFD::FileManager"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puFilterManager",
+        "qualType" : "FilterManager",
+        "desugaredQualType" : "IGFD::FilterManager"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puSearchManager",
+        "qualType" : "SearchManager",
+        "desugaredQualType" : "IGFD::SearchManager"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puName",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puShowDialog",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puDialogCenterPos",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puLastImGuiFrameCount",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puFooterHeight",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puCanWeContinue",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puOkResultToConfirm",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puIsOk",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puFileInputIsActive",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puFileListViewIsActive",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puDLGkey",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puDLGtitle",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puDLGflags",
+        "qualType" : "ImGuiFileDialogFlags",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puDLGuserDatas",
+        "qualType" : "UserDatas",
+        "desugaredQualType" : "void *"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puDLGoptionsPane",
+        "qualType" : "PaneFun",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puDLGoptionsPaneWidth",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puDLGmodal",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puNeedToExitDialog",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puUseCustomLocale",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puLocaleCategory",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puLocaleBegin",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puLocaleEnd",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "NewFrame",
+        "resultType" : "void"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "EndFrame",
+        "resultType" : "void"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "ResetForNewDialog",
+        "resultType" : "void"
+      } ]
+    }, {
+      "@type" : "AstRecordDecl",
+      "name" : "FileDialog",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+          } ]
+        } ]
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "prFileDialogInternal",
+        "qualType" : "FileDialogInternal",
+        "desugaredQualType" : "IGFD::FileDialogInternal"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "prFileListClipper",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "puAnyWindowsHovered",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "Instance",
+        "resultType" : "FileDialog *"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "OpenDialog",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vKey",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vTitle",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFilters",
+          "qualType" : "const char *",
+          "desugaredQualType" : "const char *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vPath",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileName",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vCountSelectionMax",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &",
+          "defaultValue" : "1"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vUserDatas",
+          "qualType" : "UserDatas",
+          "desugaredQualType" : "void *",
+          "defaultValue" : "nullptr"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFlags",
+          "qualType" : "ImGuiFileDialogFlags",
+          "desugaredQualType" : "int",
+          "defaultValue" : "0"
+        }, {
+          "@type" : "AstFullComment",
+          "decls" : [ {
+            "@type" : "AstParagraphComment",
+            "decls" : [ {
+              "@type" : "AstTextComment",
+              "text" : " standard dialog"
+            } ]
+          } ]
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "OpenDialog",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vKey",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vTitle",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFilters",
+          "qualType" : "const char *",
+          "desugaredQualType" : "const char *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFilePathName",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vCountSelectionMax",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &",
+          "defaultValue" : "1"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vUserDatas",
+          "qualType" : "UserDatas",
+          "desugaredQualType" : "void *",
+          "defaultValue" : "nullptr"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFlags",
+          "qualType" : "ImGuiFileDialogFlags",
+          "desugaredQualType" : "int",
+          "defaultValue" : "0"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "OpenDialog",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vKey",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vTitle",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFilters",
+          "qualType" : "const char *",
+          "desugaredQualType" : "const char *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vPath",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileName",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vSidePane",
+          "qualType" : "const PaneFun &",
+          "desugaredQualType" : "const PaneFun &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vSidePaneWidth",
+          "qualType" : "const float &",
+          "desugaredQualType" : "const float &",
+          "defaultValue" : "250.0f"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vCountSelectionMax",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &",
+          "defaultValue" : "1"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vUserDatas",
+          "qualType" : "UserDatas",
+          "desugaredQualType" : "void *",
+          "defaultValue" : "nullptr"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFlags",
+          "qualType" : "ImGuiFileDialogFlags",
+          "desugaredQualType" : "int",
+          "defaultValue" : "0"
+        }, {
+          "@type" : "AstFullComment",
+          "decls" : [ {
+            "@type" : "AstParagraphComment",
+            "decls" : [ {
+              "@type" : "AstTextComment",
+              "text" : " with pane"
+            } ]
+          } ]
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "OpenDialog",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vKey",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vTitle",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFilters",
+          "qualType" : "const char *",
+          "desugaredQualType" : "const char *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFilePathName",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vSidePane",
+          "qualType" : "const PaneFun &",
+          "desugaredQualType" : "const PaneFun &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vSidePaneWidth",
+          "qualType" : "const float &",
+          "desugaredQualType" : "const float &",
+          "defaultValue" : "250.0f"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vCountSelectionMax",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &",
+          "defaultValue" : "1"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vUserDatas",
+          "qualType" : "UserDatas",
+          "desugaredQualType" : "void *",
+          "defaultValue" : "nullptr"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFlags",
+          "qualType" : "ImGuiFileDialogFlags",
+          "desugaredQualType" : "int",
+          "defaultValue" : "0"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "OpenModal",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vKey",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vTitle",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFilters",
+          "qualType" : "const char *",
+          "desugaredQualType" : "const char *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vPath",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileName",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vCountSelectionMax",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &",
+          "defaultValue" : "1"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vUserDatas",
+          "qualType" : "UserDatas",
+          "desugaredQualType" : "void *",
+          "defaultValue" : "nullptr"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFlags",
+          "qualType" : "ImGuiFileDialogFlags",
+          "desugaredQualType" : "int",
+          "defaultValue" : "0"
+        }, {
+          "@type" : "AstFullComment",
+          "decls" : [ {
+            "@type" : "AstParagraphComment",
+            "decls" : [ {
+              "@type" : "AstTextComment",
+              "text" : " modal dialog"
+            } ]
+          } ]
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "OpenModal",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vKey",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vTitle",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFilters",
+          "qualType" : "const char *",
+          "desugaredQualType" : "const char *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFilePathName",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vCountSelectionMax",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &",
+          "defaultValue" : "1"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vUserDatas",
+          "qualType" : "UserDatas",
+          "desugaredQualType" : "void *",
+          "defaultValue" : "nullptr"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFlags",
+          "qualType" : "ImGuiFileDialogFlags",
+          "desugaredQualType" : "int",
+          "defaultValue" : "0"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "OpenModal",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vKey",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vTitle",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFilters",
+          "qualType" : "const char *",
+          "desugaredQualType" : "const char *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vPath",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileName",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vSidePane",
+          "qualType" : "const PaneFun &",
+          "desugaredQualType" : "const PaneFun &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vSidePaneWidth",
+          "qualType" : "const float &",
+          "desugaredQualType" : "const float &",
+          "defaultValue" : "250.0f"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vCountSelectionMax",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &",
+          "defaultValue" : "1"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vUserDatas",
+          "qualType" : "UserDatas",
+          "desugaredQualType" : "void *",
+          "defaultValue" : "nullptr"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFlags",
+          "qualType" : "ImGuiFileDialogFlags",
+          "desugaredQualType" : "int",
+          "defaultValue" : "0"
+        }, {
+          "@type" : "AstFullComment",
+          "decls" : [ {
+            "@type" : "AstParagraphComment",
+            "decls" : [ {
+              "@type" : "AstTextComment",
+              "text" : " with pane"
+            } ]
+          } ]
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "OpenModal",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vKey",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vTitle",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFilters",
+          "qualType" : "const char *",
+          "desugaredQualType" : "const char *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFilePathName",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vSidePane",
+          "qualType" : "const PaneFun &",
+          "desugaredQualType" : "const PaneFun &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vSidePaneWidth",
+          "qualType" : "const float &",
+          "desugaredQualType" : "const float &",
+          "defaultValue" : "250.0f"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vCountSelectionMax",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &",
+          "defaultValue" : "1"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vUserDatas",
+          "qualType" : "UserDatas",
+          "desugaredQualType" : "void *",
+          "defaultValue" : "nullptr"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFlags",
+          "qualType" : "ImGuiFileDialogFlags",
+          "desugaredQualType" : "int",
+          "defaultValue" : "0"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "Display",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vKey",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFlags",
+          "qualType" : "int",
+          "desugaredQualType" : "int",
+          "defaultValue" : "="
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vMinSize",
+          "qualType" : "int",
+          "desugaredQualType" : "int",
+          "defaultValue" : "ImVec2(0, 0)"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vMaxSize",
+          "qualType" : "int",
+          "desugaredQualType" : "int",
+          "defaultValue" : "ImVec2(FLT_MAX, FLT_MAX)"
+        }, {
+          "@type" : "AstFullComment",
+          "decls" : [ {
+            "@type" : "AstParagraphComment",
+            "decls" : [ {
+              "@type" : "AstTextComment",
+              "text" : " Display / Close dialog form"
+            } ]
+          } ]
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "Close",
+        "resultType" : "void"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "WasOpenedThisFrame",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vKey",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstFullComment",
+          "decls" : [ {
+            "@type" : "AstParagraphComment",
+            "decls" : [ {
+              "@type" : "AstTextComment",
+              "text" : " queries"
+            } ]
+          } ]
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "WasOpenedThisFrame",
+        "resultType" : "bool"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "IsOpened",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vKey",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "IsOpened",
+        "resultType" : "bool"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetOpenedKey",
+        "resultType" : "int"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "IsOk",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstFullComment",
+          "decls" : [ {
+            "@type" : "AstParagraphComment",
+            "decls" : [ {
+              "@type" : "AstTextComment",
+              "text" : " get result"
+            } ]
+          } ]
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetSelection",
+        "resultType" : "int"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetFilePathName",
+        "resultType" : "int"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetCurrentFileName",
+        "resultType" : "int"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetCurrentPath",
+        "resultType" : "int"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetCurrentFilter",
+        "resultType" : "int"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetUserDatas",
+        "resultType" : "UserDatas"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "SetFileStyle",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFlags",
+          "qualType" : "const IGFD_FileStyleFlags &",
+          "desugaredQualType" : "const IGFD_FileStyleFlags &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vCriteria",
+          "qualType" : "const char *",
+          "desugaredQualType" : "const char *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vInfos",
+          "qualType" : "const FileStyle &",
+          "desugaredQualType" : "const FileStyle &"
+        }, {
+          "@type" : "AstFullComment",
+          "decls" : [ {
+            "@type" : "AstParagraphComment",
+            "decls" : [ {
+              "@type" : "AstTextComment",
+              "text" : " file style by extentions"
+            } ]
+          } ]
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "SetFileStyle",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFlags",
+          "qualType" : "const IGFD_FileStyleFlags &",
+          "desugaredQualType" : "const IGFD_FileStyleFlags &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vCriteria",
+          "qualType" : "const char *",
+          "desugaredQualType" : "const char *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vColor",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vIcon",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &",
+          "defaultValue" : "="
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFont",
+          "qualType" : "int *",
+          "desugaredQualType" : "int *",
+          "defaultValue" : "nullptr"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "GetFileStyle",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFlags",
+          "qualType" : "const IGFD_FileStyleFlags &",
+          "desugaredQualType" : "const IGFD_FileStyleFlags &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vCriteria",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vOutColor",
+          "qualType" : "int *",
+          "desugaredQualType" : "int *"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vOutIcon",
+          "qualType" : "int *",
+          "desugaredQualType" : "int *",
+          "defaultValue" : "nullptr"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vOutFont",
+          "qualType" : "int **",
+          "desugaredQualType" : "int **",
+          "defaultValue" : "nullptr"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "ClearFilesStyle",
+        "resultType" : "void"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "SetLocales",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vLocaleCategory",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vLocaleBegin",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vLocaleEnd",
+          "qualType" : "const int &",
+          "desugaredQualType" : "const int &"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "NewFrame",
+        "resultType" : "void"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "EndFrame",
+        "resultType" : "void"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "QuitFrame",
+        "resultType" : "void"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "prConfirm_Or_OpenOverWriteFileDialog_IfNeeded",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vLastAction",
+          "qualType" : "bool",
+          "desugaredQualType" : "bool"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFlags",
+          "qualType" : "int",
+          "desugaredQualType" : "int"
+        }, {
+          "@type" : "AstFullComment",
+          "decls" : [ {
+            "@type" : "AstParagraphComment",
+            "decls" : [ {
+              "@type" : "AstTextComment",
+              "text" : " others"
+            } ]
+          } ]
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "prDrawHeader",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstFullComment",
+          "decls" : [ {
+            "@type" : "AstParagraphComment",
+            "decls" : [ {
+              "@type" : "AstTextComment",
+              "text" : " dialog parts"
+            } ]
+          } ]
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "prDrawContent",
+        "resultType" : "void"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "prDrawFooter",
+        "resultType" : "bool"
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "prDrawSidePane",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vHeight",
+          "qualType" : "float",
+          "desugaredQualType" : "float"
+        }, {
+          "@type" : "AstFullComment",
+          "decls" : [ {
+            "@type" : "AstParagraphComment",
+            "decls" : [ {
+              "@type" : "AstTextComment",
+              "text" : " widgets components"
+            } ]
+          } ]
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "prSelectableItem",
+        "resultType" : "bool",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vidx",
+          "qualType" : "int",
+          "desugaredQualType" : "int"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vInfos",
+          "qualType" : "std::shared_ptr<FileInfos>",
+          "desugaredQualType" : "std::shared_ptr<IGFD::FileInfos>"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vSelected",
+          "qualType" : "bool",
+          "desugaredQualType" : "bool"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFmt",
+          "qualType" : "const char *",
+          "desugaredQualType" : "const char *"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "prDrawFileListView",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vSize",
+          "qualType" : "int",
+          "desugaredQualType" : "int"
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "prBeginFileColorIconStyle",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFileInfos",
+          "qualType" : "std::shared_ptr<FileInfos>",
+          "desugaredQualType" : "std::shared_ptr<IGFD::FileInfos>"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vOutShowColor",
+          "qualType" : "bool &",
+          "desugaredQualType" : "bool &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vOutStr",
+          "qualType" : "int &",
+          "desugaredQualType" : "int &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vOutFont",
+          "qualType" : "int **",
+          "desugaredQualType" : "int **"
+        }, {
+          "@type" : "AstFullComment",
+          "decls" : [ {
+            "@type" : "AstParagraphComment",
+            "decls" : [ {
+              "@type" : "AstTextComment",
+              "text" : " to be called only by these function and theirs overrides"
+            }, {
+              "@type" : "AstTextComment",
+              "text" : " - prDrawFileListView"
+            }, {
+              "@type" : "AstTextComment",
+              "text" : " - prDrawThumbnailsListView"
+            }, {
+              "@type" : "AstTextComment",
+              "text" : " - prDrawThumbnailsGridView"
+            } ]
+          } ]
+        } ]
+      }, {
+        "@type" : "AstFunctionDecl",
+        "name" : "prEndFileColorIconStyle",
+        "resultType" : "void",
+        "decls" : [ {
+          "@type" : "AstParmVarDecl",
+          "name" : "vShowColor",
+          "qualType" : "const bool &",
+          "desugaredQualType" : "const bool &"
+        }, {
+          "@type" : "AstParmVarDecl",
+          "name" : "vFont",
+          "qualType" : "int *",
+          "desugaredQualType" : "int *"
+        } ]
+      } ]
+    } ]
+  }, {
+    "@type" : "AstRecordDecl",
+    "name" : "IGFD_Selection_Pair",
+    "decls" : [ {
+      "@type" : "AstFullComment",
+      "decls" : [ {
+        "@type" : "AstParagraphComment",
+        "decls" : [ {
+          "@type" : "AstTextComment",
+          "text" : "/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+        }, {
+          "@type" : "AstTextComment",
+          "text" : "// C API ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+        }, {
+          "@type" : "AstTextComment",
+          "text" : "/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "fileName",
+      "qualType" : "char *",
+      "desugaredQualType" : "char *"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "filePathName",
+      "qualType" : "char *",
+      "desugaredQualType" : "char *"
+    } ]
+  }, {
+    "@type" : "AstRecordDecl",
+    "name" : "IGFD_Selection",
+    "decls" : [ {
+      "@type" : "AstFieldDecl",
+      "name" : "table",
+      "qualType" : "IGFD_Selection_Pair *",
+      "desugaredQualType" : "IGFD_Selection_Pair *"
+    }, {
+      "@type" : "AstFieldDecl",
+      "name" : "count",
+      "qualType" : "size_t",
+      "desugaredQualType" : "unsigned long"
+    } ]
+  } ]
+}

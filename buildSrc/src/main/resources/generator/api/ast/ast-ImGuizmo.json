@@ -1,0 +1,1107 @@
+{
+  "info" : {
+    "source" : "include/imguizmo/ImGuizmo.h",
+    "hash" : "330da82032707d5d2f3bd3f474934613",
+    "url" : "https://github.com/CedricGuillemet/ImGuizmo.git",
+    "revision" : "bcdd86bb8a8019b373e46921c52ef7f2fdaa8b16"
+  },
+  "decls" : [ {
+    "@type" : "AstNamespaceDecl",
+    "name" : "ImGuizmo",
+    "decls" : [ {
+      "@type" : "AstFunctionDecl",
+      "name" : "SetDrawlist",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "drawlist",
+        "qualType" : "int *",
+        "desugaredQualType" : "int *",
+        "defaultValue" : "="
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " call inside your own window and before Manipulate() in order to draw gizmo to that window."
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " Or pass a specific ImDrawList to draw to (e.g. ImGui::GetForegroundDrawList())."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "BeginFrame",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " call BeginFrame right after ImGui_XXXX_NewFrame();"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SetImGuiContext",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "ctx",
+        "qualType" : "int *",
+        "desugaredQualType" : "int *"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " this is necessary because when imguizmo is compiled into a dll, and imgui into another"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " globals are not shared between them."
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " More details at https://stackoverflow.com/questions/19373061/what-happens-to-global-and-static-variables-in-a-shared-library-when-it-is-dynam"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " expose method to set imgui context"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "IsOver",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " return true if mouse cursor is over any gizmo control (axis, plan or screen component)"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "IsUsing",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " return true if mouse IsOver or if the gizmo is in moving state"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "IsUsingAny",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " return true if any gizmo is in moving state"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "Enable",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "enable",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " enable/disable the gizmo. Stay in the state until next call to Enable."
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " gizmo is rendered with gray half transparent color when disabled"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "DecomposeMatrixToComponents",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "matrix",
+        "qualType" : "const float *",
+        "desugaredQualType" : "const float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "translation",
+        "qualType" : "float *",
+        "desugaredQualType" : "float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "rotation",
+        "qualType" : "float *",
+        "desugaredQualType" : "float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "scale",
+        "qualType" : "float *",
+        "desugaredQualType" : "float *"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " helper functions for manualy editing translation/rotation/scale with an input float"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " translation, rotation and scale float points to 3 floats each"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " Angles are in degrees (more suitable for human editing)"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " example:"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " float matrixTranslation[3], matrixRotation[3], matrixScale[3];"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " ImGuizmo::DecomposeMatrixToComponents(gizmoMatrix.m16, matrixTranslation, matrixRotation, matrixScale);"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " ImGui::InputFloat3(\"Tr\", matrixTranslation, 3);"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " ImGui::InputFloat3(\"Rt\", matrixRotation, 3);"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " ImGui::InputFloat3(\"Sc\", matrixScale, 3);"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " ImGuizmo::RecomposeMatrixFromComponents(matrixTranslation, matrixRotation, matrixScale, gizmoMatrix.m16);"
+          } ]
+        }, {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " These functions have some numerical stability issues for now. Use with caution."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "RecomposeMatrixFromComponents",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "translation",
+        "qualType" : "const float *",
+        "desugaredQualType" : "const float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "rotation",
+        "qualType" : "const float *",
+        "desugaredQualType" : "const float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "scale",
+        "qualType" : "const float *",
+        "desugaredQualType" : "const float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "matrix",
+        "qualType" : "float *",
+        "desugaredQualType" : "float *"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SetRect",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "x",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "y",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "width",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "height",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SetOrthographic",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "isOrthographic",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " default is false"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "DrawCubes",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "view",
+        "qualType" : "const float *",
+        "desugaredQualType" : "const float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "projection",
+        "qualType" : "const float *",
+        "desugaredQualType" : "const float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "matrices",
+        "qualType" : "const float *",
+        "desugaredQualType" : "const float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "matrixCount",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Render a cube with face color corresponding to face normal. Usefull for debug/tests"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "DrawGrid",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "view",
+        "qualType" : "const float *",
+        "desugaredQualType" : "const float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "projection",
+        "qualType" : "const float *",
+        "desugaredQualType" : "const float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "matrix",
+        "qualType" : "const float *",
+        "desugaredQualType" : "const float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "gridSize",
+        "qualType" : "const float",
+        "desugaredQualType" : "const float"
+      } ]
+    }, {
+      "@type" : "AstEnumDecl",
+      "name" : "OPERATION",
+      "decls" : [ {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " call it when you want a gizmo"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " Needs view and projection matrices. "
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " matrix parameter is the source matrix (where will be gizmo be drawn) and might be transformed by the function. Return deltaMatrix is optional"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " translation is applied in world space"
+          } ]
+        } ]
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "TRANSLATE_X",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 0,
+        "value" : "(1u << 0)",
+        "evaluatedValue" : 1
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "TRANSLATE_Y",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 1,
+        "value" : "(1u << 1)",
+        "evaluatedValue" : 2
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "TRANSLATE_Z",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 2,
+        "value" : "(1u << 2)",
+        "evaluatedValue" : 4
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "ROTATE_X",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 3,
+        "value" : "(1u << 3)",
+        "evaluatedValue" : 8
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "ROTATE_Y",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 4,
+        "value" : "(1u << 4)",
+        "evaluatedValue" : 16
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "ROTATE_Z",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 5,
+        "value" : "(1u << 5)",
+        "evaluatedValue" : 32
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "ROTATE_SCREEN",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 6,
+        "value" : "(1u << 6)",
+        "evaluatedValue" : 64
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "SCALE_X",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 7,
+        "value" : "(1u << 7)",
+        "evaluatedValue" : 128
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "SCALE_Y",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 8,
+        "value" : "(1u << 8)",
+        "evaluatedValue" : 256
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "SCALE_Z",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 9,
+        "value" : "(1u << 9)",
+        "evaluatedValue" : 512
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "BOUNDS",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 10,
+        "value" : "(1u << 10)",
+        "evaluatedValue" : 1024
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "SCALE_XU",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 11,
+        "value" : "(1u << 11)",
+        "evaluatedValue" : 2048
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "SCALE_YU",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 12,
+        "value" : "(1u << 12)",
+        "evaluatedValue" : 4096
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "SCALE_ZU",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 13,
+        "value" : "(1u << 13)",
+        "evaluatedValue" : 8192
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "TRANSLATE",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 14,
+        "value" : "TRANSLATE_X | TRANSLATE_Y | TRANSLATE_Z",
+        "evaluatedValue" : 7
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "ROTATE",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 15,
+        "value" : "ROTATE_X | ROTATE_Y | ROTATE_Z | ROTATE_SCREEN",
+        "evaluatedValue" : 120
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "SCALE",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 16,
+        "value" : "SCALE_X | SCALE_Y | SCALE_Z",
+        "evaluatedValue" : 896
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "SCALEU",
+        "docComment" : "universal",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 17,
+        "value" : "SCALE_XU | SCALE_YU | SCALE_ZU",
+        "evaluatedValue" : 14336
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "UNIVERSAL",
+        "qualType" : "ImGuizmo::OPERATION",
+        "order" : 18,
+        "value" : "TRANSLATE | ROTATE | SCALEU",
+        "evaluatedValue" : 14463
+      } ]
+    }, {
+      "@type" : "AstEnumDecl",
+      "name" : "MODE",
+      "decls" : [ {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "LOCAL",
+        "qualType" : "ImGuizmo::MODE",
+        "order" : 0,
+        "evaluatedValue" : 0
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "WORLD",
+        "qualType" : "ImGuizmo::MODE",
+        "order" : 1,
+        "evaluatedValue" : 1
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "Manipulate",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "view",
+        "qualType" : "const float *",
+        "desugaredQualType" : "const float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "projection",
+        "qualType" : "const float *",
+        "desugaredQualType" : "const float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "operation",
+        "qualType" : "OPERATION",
+        "desugaredQualType" : "ImGuizmo::OPERATION"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "mode",
+        "qualType" : "MODE",
+        "desugaredQualType" : "ImGuizmo::MODE"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "matrix",
+        "qualType" : "float *",
+        "desugaredQualType" : "float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "deltaMatrix",
+        "qualType" : "float *",
+        "desugaredQualType" : "float *",
+        "defaultValue" : "="
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "snap",
+        "qualType" : "const float *",
+        "desugaredQualType" : "const float *",
+        "defaultValue" : "="
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "localBounds",
+        "qualType" : "const float *",
+        "desugaredQualType" : "const float *",
+        "defaultValue" : "="
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "boundsSnap",
+        "qualType" : "const float *",
+        "desugaredQualType" : "const float *",
+        "defaultValue" : "="
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "ViewManipulate",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "view",
+        "qualType" : "float *",
+        "desugaredQualType" : "float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "length",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "position",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "size",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "backgroundColor",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Please note that this cubeview is patented by Autodesk : https://patents.google.com/patent/US7782319B2/en"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " It seems to be a defensive patent in the US. I don't think it will bring troubles using it as"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " other software are using the same mechanics. But just in case, you are now warned!"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "ViewManipulate",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "view",
+        "qualType" : "float *",
+        "desugaredQualType" : "float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "projection",
+        "qualType" : "const float *",
+        "desugaredQualType" : "const float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "operation",
+        "qualType" : "OPERATION",
+        "desugaredQualType" : "ImGuizmo::OPERATION"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "mode",
+        "qualType" : "MODE",
+        "desugaredQualType" : "ImGuizmo::MODE"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "matrix",
+        "qualType" : "float *",
+        "desugaredQualType" : "float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "length",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "position",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "size",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "backgroundColor",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " use this version if you did not call Manipulate before and you are just using ViewManipulate"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SetID",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "PushID",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "str_id",
+        "qualType" : "const char *",
+        "desugaredQualType" : "const char *"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " ID stack/scopes"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " Read the FAQ (docs/FAQ.md or http://dearimgui.org/faq) for more details about how ID are handled in dear imgui."
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " - Those questions are answered and impacted by understanding of the ID stack system:"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "   - \"Q: Why is my widget not reacting when I click on it?\""
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "   - \"Q: How can I have widgets with an empty label?\""
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "   - \"Q: How can I have multiple widgets with the same label?\""
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " - Short version: ID are hashes of the entire ID stack. If you are creating widgets in a loop you most likely"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "   want to push a unique identifier (e.g. object pointer, loop index) to uniquely differentiate them."
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " - You can also use the \"Label##foobar\" syntax within widget label to distinguish them from each others."
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " - In this header file we use the \"label\"/\"name\" terminology to denote a string that will be displayed + used as an ID,"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : "   whereas \"str_id\" denote a string that is only used as an ID and not normally displayed."
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "PushID",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "str_id_begin",
+        "qualType" : "const char *",
+        "desugaredQualType" : "const char *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "str_id_end",
+        "qualType" : "const char *",
+        "desugaredQualType" : "const char *"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "PushID",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "ptr_id",
+        "qualType" : "const void *",
+        "desugaredQualType" : "const void *"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "PushID",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "int_id",
+        "qualType" : "int",
+        "desugaredQualType" : "int"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "PopID",
+      "resultType" : "void"
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "GetID",
+      "resultType" : "int",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "str_id",
+        "qualType" : "const char *",
+        "desugaredQualType" : "const char *"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "GetID",
+      "resultType" : "int",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "str_id_begin",
+        "qualType" : "const char *",
+        "desugaredQualType" : "const char *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "str_id_end",
+        "qualType" : "const char *",
+        "desugaredQualType" : "const char *"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "GetID",
+      "resultType" : "int",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "ptr_id",
+        "qualType" : "const void *",
+        "desugaredQualType" : "const void *"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "IsOver",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "op",
+        "qualType" : "OPERATION",
+        "desugaredQualType" : "ImGuizmo::OPERATION"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " return true if the cursor is over the operation's gizmo"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SetGizmoSizeClipSpace",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "value",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "AllowAxisFlip",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "value",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Allow axis to flip"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " When true (default), the guizmo axis flip for better visibility"
+          }, {
+            "@type" : "AstTextComment",
+            "text" : " When false, they always stay along the positive world/local axis"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SetAxisLimit",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "value",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Configure the limit where axis are hidden"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SetAxisMask",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "x",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "y",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "z",
+        "qualType" : "bool",
+        "desugaredQualType" : "bool"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Set an axis mask to permanently hide a given axis (true -> hidden, false -> shown)"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "SetPlaneLimit",
+      "resultType" : "void",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "value",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " Configure the limit where planes are hiden"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "IsOver",
+      "resultType" : "bool",
+      "decls" : [ {
+        "@type" : "AstParmVarDecl",
+        "name" : "position",
+        "qualType" : "float *",
+        "desugaredQualType" : "float *"
+      }, {
+        "@type" : "AstParmVarDecl",
+        "name" : "pixelRadius",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      }, {
+        "@type" : "AstFullComment",
+        "decls" : [ {
+          "@type" : "AstParagraphComment",
+          "decls" : [ {
+            "@type" : "AstTextComment",
+            "text" : " from a x,y,z point in space and using Manipulation view/projection matrix, check if mouse is in pixel radius distance of that projected point"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "AstEnumDecl",
+      "name" : "COLOR",
+      "decls" : [ {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "DIRECTION_X",
+        "docComment" : "directionColor[0]",
+        "qualType" : "ImGuizmo::COLOR",
+        "order" : 0,
+        "evaluatedValue" : 0
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "DIRECTION_Y",
+        "docComment" : "directionColor[1]",
+        "qualType" : "ImGuizmo::COLOR",
+        "order" : 1,
+        "evaluatedValue" : 1
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "DIRECTION_Z",
+        "docComment" : "directionColor[2]",
+        "qualType" : "ImGuizmo::COLOR",
+        "order" : 2,
+        "evaluatedValue" : 2
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "PLANE_X",
+        "docComment" : "planeColor[0]",
+        "qualType" : "ImGuizmo::COLOR",
+        "order" : 3,
+        "evaluatedValue" : 3
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "PLANE_Y",
+        "docComment" : "planeColor[1]",
+        "qualType" : "ImGuizmo::COLOR",
+        "order" : 4,
+        "evaluatedValue" : 4
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "PLANE_Z",
+        "docComment" : "planeColor[2]",
+        "qualType" : "ImGuizmo::COLOR",
+        "order" : 5,
+        "evaluatedValue" : 5
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "SELECTION",
+        "docComment" : "selectionColor",
+        "qualType" : "ImGuizmo::COLOR",
+        "order" : 6,
+        "evaluatedValue" : 6
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "INACTIVE",
+        "docComment" : "inactiveColor",
+        "qualType" : "ImGuizmo::COLOR",
+        "order" : 7,
+        "evaluatedValue" : 7
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "TRANSLATION_LINE",
+        "docComment" : "translationLineColor",
+        "qualType" : "ImGuizmo::COLOR",
+        "order" : 8,
+        "evaluatedValue" : 8
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "SCALE_LINE",
+        "qualType" : "ImGuizmo::COLOR",
+        "order" : 9,
+        "evaluatedValue" : 9
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "ROTATION_USING_BORDER",
+        "qualType" : "ImGuizmo::COLOR",
+        "order" : 10,
+        "evaluatedValue" : 10
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "ROTATION_USING_FILL",
+        "qualType" : "ImGuizmo::COLOR",
+        "order" : 11,
+        "evaluatedValue" : 11
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "HATCHED_AXIS_LINES",
+        "qualType" : "ImGuizmo::COLOR",
+        "order" : 12,
+        "evaluatedValue" : 12
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "TEXT",
+        "qualType" : "ImGuizmo::COLOR",
+        "order" : 13,
+        "evaluatedValue" : 13
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "TEXT_SHADOW",
+        "qualType" : "ImGuizmo::COLOR",
+        "order" : 14,
+        "evaluatedValue" : 14
+      }, {
+        "@type" : "AstEnumConstantDecl",
+        "name" : "COUNT",
+        "qualType" : "ImGuizmo::COLOR",
+        "order" : 15,
+        "evaluatedValue" : 15
+      } ]
+    }, {
+      "@type" : "AstRecordDecl",
+      "name" : "Style",
+      "decls" : [ {
+        "@type" : "AstFieldDecl",
+        "name" : "TranslationLineThickness",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "TranslationLineArrowSize",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "RotationLineThickness",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "RotationOuterLineThickness",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "ScaleLineThickness",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "ScaleLineCircleSize",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "HatchedAxisLineThickness",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "CenterCircleSize",
+        "qualType" : "float",
+        "desugaredQualType" : "float"
+      }, {
+        "@type" : "AstFieldDecl",
+        "name" : "Colors",
+        "qualType" : "int[15]",
+        "desugaredQualType" : "int[15]"
+      } ]
+    }, {
+      "@type" : "AstFunctionDecl",
+      "name" : "GetStyle",
+      "resultType" : "Style &"
+    } ]
+  } ]
+}
