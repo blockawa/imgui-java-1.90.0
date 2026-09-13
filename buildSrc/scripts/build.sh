@@ -49,7 +49,7 @@ case "$VTYPE" in
 
         CFLAGS="-fPIC -DIMGUI_ENABLE_FREETYPE -Ibuild/vendor/freetype/include"
         CXXFLAGS="$CFLAGS -std=c++17 -fno-exceptions -fno-rtti"
-        LDFLAGS="-Wl,--gc-sections -shared -Lbuild/vendor/freetype/lib -lfreetype"
+        LDFLAGS="-Wl,--gc-sections -shared -s -static-libstdc++ -Lbuild/vendor/freetype/lib -lfreetype"
 
         JNI_DIR=/tmp/imgui/android-arm64-build/jni
         rm -rf /tmp/imgui/android-arm64-build
@@ -115,16 +115,6 @@ case "$VTYPE" in
 
         echo "Copying Android arm64 library to destination..."
         cp /tmp/imgui/libsNative/android-arm64/libimgui-moulberry90-java64.so /tmp/imgui/dst/
-
-        echo "Copying libc++_shared.so from NDK..."
-        cp $TOOLCHAIN/aarch64-linux-android/lib/libc++_shared.so /tmp/imgui/dst/ 2>/dev/null || \
-        cp $TOOLCHAIN/sysroot/usr/lib/aarch64-linux-android/libc++_shared.so /tmp/imgui/dst/ 2>/dev/null || {
-            echo "WARNING: Could not find libc++_shared.so in NDK, searching..."
-            find $ANDROID_NDK_HOME -name "libc++_shared.so" -path "*/aarch64*" | head -1 | xargs -I{} cp {} /tmp/imgui/dst/ || {
-                echo "ERROR: Could not copy libc++_shared.so"
-                exit 1
-            }
-        }
 
         echo "Android arm64 build completed successfully"
         echo "Output files:"
