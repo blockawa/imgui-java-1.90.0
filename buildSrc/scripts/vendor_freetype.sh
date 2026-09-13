@@ -28,33 +28,54 @@ case "$VTYPE" in
         API=21
         TARGET=aarch64-linux-android
         CC=$TOOLCHAIN/bin/${TARGET}${API}-clang
+        CXX=$TOOLCHAIN/bin/${TARGET}${API}-clang++
 
         echo "Cleaning and extracting FreeType source..."
         rm -rf $LIBDIR
         mkdir -p $LIBDIR
         tar -xzf ./vendor/freetype-$BUILD_FREETYPE_VERSION.tar.gz -C $LIBDIR --strip-components=1
+
         cd $LIBDIR
 
-        export CC
-        ./configure \
-            --host=$TARGET \
-            --prefix=$(pwd)/install \
-            --without-zlib \
-            --with-brotli=no \
-            --with-bzip2=no \
-            --with-png=no \
-            --with-harfbuzz=no \
-            --enable-static=yes \
-            --enable-shared=no
+        echo "Cleaning previous CMake builds..."
+        rm -rf build_android
 
-        make -j$(nproc)
-        make install
+        echo "Configuring FreeType with CMake..."
+        cmake -B build_android \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_SYSTEM_NAME=Android \
+            -DCMAKE_SYSTEM_VERSION=$API \
+            -DCMAKE_ANDROID_ARCH_ABI=arm64-v8a \
+            -DCMAKE_C_COMPILER=$CC \
+            -DCMAKE_CXX_COMPILER=$CXX \
+            -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+            -DFT_DISABLE_BZIP2=ON \
+            -DFT_DISABLE_BROTLI=ON \
+            -DFT_DISABLE_HARFBUZZ=ON \
+            -DFT_DISABLE_PNG=ON \
+            -DFT_DISABLE_ZLIB=ON \
+            .
+        if [ $? -ne 0 ]; then
+            echo "Failed to configure FreeType with CMake"
+            exit 1
+        fi
 
-        $TOOLCHAIN/bin/llvm-strip $(pwd)/install/lib/libfreetype.a
+        echo "Building FreeType..."
+        cmake --build build_android --config Release
+        if [ $? -ne 0 ]; then
+            echo "Failed to build FreeType"
+            exit 1
+        fi
+
+        if [ ! -f build_android/libfreetype.a ]; then
+            echo "File build_android/libfreetype.a not found!"
+            exit 1
+        fi
 
         mkdir -p lib
-        cp $(pwd)/install/lib/libfreetype.a lib/
+        cp build_android/libfreetype.a lib/
         echo "FreeType built successfully"
+
         ;;
 
     *)
