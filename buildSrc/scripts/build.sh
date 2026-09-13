@@ -5,6 +5,9 @@ BASEDIR=$(dirname "$0")
 cd "$BASEDIR"/../.. || exit 1
 echo "Navigated to $(pwd)"
 
+# Ensure gradlew is executable
+chmod +x gradlew
+
 # Check if vendor type argument is provided
 if [ -z "$1" ]; then
     echo "Vendor type is required"
