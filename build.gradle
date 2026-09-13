@@ -1,0 +1,85 @@
+import tool.generator.ast.task.GenerateAst
+
+import java.text.SimpleDateFormat
+
+ext {
+    lwjglVersion = '3.4.1'
+}
+
+// Gradle 9's configuration cache forbids starting external processes at
+// configuration time via Groovy's '...'.execute() (the cache can't know
+// if the result would be different next time). Use providers.exec, which
+// is cache-aware.
+def gitDescribeProvider = providers.exec {
+    commandLine 'git', 'describe', '--tags', '--always'
+}.standardOutput.asText.map { it.trim().startsWith('v') ? it.trim().substring(1) : it.trim() }.orElse('unknown')
+
+def gitRevProvider = providers.exec {
+    commandLine 'git', 'rev-parse', 'HEAD'
+}.standardOutput.asText.map { it.trim() }.orElse('unknown')
+
+allprojects {
+    group = 'imgui-java'
+    version = gitDescribeProvider.get()
+
+    repositories {
+        mavenCentral()
+    }
+
+    tasks.withType(Jar).tap {
+        configureEach {
+            from(project.rootDir) {
+                include 'LICENSE'
+                into 'META-INF'
+            }
+
+            def jdkMetadata = tasks.withType(JavaCompile).find().javaCompiler.get().metadata
+            def buildJdk = "${jdkMetadata.javaRuntimeVersion} (${jdkMetadata.vendor})".toString()
+            def buildRev = gitRevProvider.get()
+
+            manifest {
+                attributes (
+                        'Implementation-Title': project.name,
+                        'Implementation-Version': project.version,
+                        'Build-Timestamp': new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").format(System.currentTimeMillis()),
+                        'Build-Revision': buildRev,
+                        'Build-Jdk': buildJdk,
+                        'Source-Compatibility': tasks.withType(JavaCompile).find().sourceCompatibility,
+                        'Target-Compatibility': tasks.withType(JavaCompile).find().targetCompatibility,
+                        'Created-By': "Gradle ${gradle.gradleVersion} "
+                )
+            }
+        }
+    }
+}
+
+tasks.register('buildAll') { t ->
+    t.group = 'build'
+    t.description = 'Build all project sources.'
+    t.dependsOn ":imgui-binding:generateApi"
+    t.dependsOn ":imgui-binding:build"
+}
+
+tasks.register('generateAst', GenerateAst) {
+    headerFiles = [
+            file('include/imgui/imgui.h'),
+            file('include/imgui/imgui_internal.h'),
+            file('include/imgui/misc/freetype/imgui_freetype.h'),
+            file('include/ImGuiFileDialog/ImGuiFileDialog.h'),
+            file('include/imgui-knobs/imgui-knobs.h'),
+            file('include/imguizmo/ImGuizmo.h'),
+            file('include/imnodes/imnodes.h'),
+            file('include/implot/implot.h'),
+            file('include/imgui-node-editor/imgui_node_editor.h'),
+            file('include/ImGuiColorTextEdit/TextEditor.h'),
+    ]
+}
+
+// imgui-node-editor has an unreleased fix pending for imgui 1.92's new
+// 'operator*(float, ImVec2)'. Apply a small patch file to the vendored
+// submodule before native compile. The script is idempotent.
+tasks.register('applyVendorPatches', Exec) {
+    group = 'build'
+    description = 'Apply patches to vendored submodules (e.g. imgui-node-editor imgui 1.92 compat).'
+    commandLine 'bash', 'buildSrc/scripts/apply_vendor_patches.sh'
+}
