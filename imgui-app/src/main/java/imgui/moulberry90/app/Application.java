@@ -1,4 +1,4 @@
-package imgui.app;
+package imgui.moulberry90.app;
 
 /**
  * Application class from which ImGui applications extend.

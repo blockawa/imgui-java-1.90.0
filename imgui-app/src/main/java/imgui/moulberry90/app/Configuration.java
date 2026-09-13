@@ -1,4 +1,4 @@
-package imgui.app;
+package imgui.moulberry90.app;
 
 /**
  * Data class to provide basic information about the window. Like, the title name etc.

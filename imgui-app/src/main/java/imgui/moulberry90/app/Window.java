@@ -1,9 +1,9 @@
-package imgui.app;
+package imgui.moulberry90.app;
 
-import imgui.ImGui;
-import imgui.flag.ImGuiConfigFlags;
-import imgui.gl3.ImGuiImplGl3;
-import imgui.glfw.ImGuiImplGlfw;
+import imgui.moulberry90.ImGui;
+import imgui.moulberry90.flag.ImGuiConfigFlags;
+import imgui.moulberry90.gl3.ImGuiImplGl3;
+import imgui.moulberry90.glfw.ImGuiImplGlfw;
 import org.lwjgl.glfw.Callbacks;
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.glfw.GLFWErrorCallback;

@@ -1,16 +1,16 @@
-package imgui.gl3;
+package imgui.moulberry90.gl3;
 
-import imgui.ImDrawData;
-import imgui.ImFontAtlas;
-import imgui.ImGui;
-import imgui.ImGuiIO;
-import imgui.ImGuiViewport;
-import imgui.ImVec4;
-import imgui.callback.ImPlatformFuncViewport;
-import imgui.flag.ImGuiBackendFlags;
-import imgui.flag.ImGuiConfigFlags;
-import imgui.flag.ImGuiViewportFlags;
-import imgui.type.ImInt;
+import imgui.moulberry90.ImDrawData;
+import imgui.moulberry90.ImFontAtlas;
+import imgui.moulberry90.ImGui;
+import imgui.moulberry90.ImGuiIO;
+import imgui.moulberry90.ImGuiViewport;
+import imgui.moulberry90.ImVec4;
+import imgui.moulberry90.callback.ImPlatformFuncViewport;
+import imgui.moulberry90.flag.ImGuiBackendFlags;
+import imgui.moulberry90.flag.ImGuiConfigFlags;
+import imgui.moulberry90.flag.ImGuiViewportFlags;
+import imgui.moulberry90.type.ImInt;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.opengl.GLCapabilities;
 
