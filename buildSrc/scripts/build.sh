@@ -56,11 +56,16 @@ case "$VTYPE" in
         mkdir -p $JNI_DIR
 
         echo "Generating JNI C++ sources..."
-        ./gradlew :imgui-binding:classes 2>/dev/null || true
-        ./gradlew :imgui-binding:generateJni -DjniOutputDir=$JNI_DIR 2>/dev/null || {
-            echo "Gradle generateJni failed, falling back to javac -h..."
+        ./gradlew :imgui-binding:classes || {
+            echo "ERROR: Gradle classes task failed"
+            exit 1
+        }
+        ./gradlew :imgui-binding:generateJni -DjniOutputDir=$JNI_DIR || {
+            echo "ERROR: NativeCodeGenerator failed to generate JNI C++ sources"
+            echo "Trying fallback: javac -h..."
             find imgui-binding/src/generated/java -name '*.java' > /tmp/java_sources.txt
             javac -h $JNI_DIR -sourcepath imgui-binding/src/generated/java:imgui-binding/src/main/java @/tmp/java_sources.txt 2>/dev/null || true
+            echo "WARNING: javac -h only generates headers, not implementations. Java_ symbols may be missing."
         }
 
         echo "Applying vendor patches..."
@@ -109,7 +114,17 @@ case "$VTYPE" in
             exit 1
         }
 
-        $TOOLCHAIN/bin/llvm-strip /tmp/imgui/libsNative/android-arm64/libimgui-moulberry90-java64.so
+        $TOOLCHAIN/bin/llvm-strip --strip-debug /tmp/imgui/libsNative/android-arm64/libimgui-moulberry90-java64.so
+
+        echo "Verifying JNI symbols..."
+        JNI_COUNT=$($TOOLCHAIN/bin/llvm-nm -D /tmp/imgui/libsNative/android-arm64/libimgui-moulberry90-java64.so 2>/dev/null | grep -c "Java_" || true)
+        echo "Found $JNI_COUNT Java_ symbols"
+        if [ "$JNI_COUNT" -eq 0 ]; then
+            echo "ERROR: No Java_ JNI symbols found! Build will fail on device."
+            echo "All exported symbols:"
+            $TOOLCHAIN/bin/llvm-nm -D /tmp/imgui/libsNative/android-arm64/libimgui-moulberry90-java64.so 2>/dev/null | head -20
+            exit 1
+        fi
 
         if [ ! -f /tmp/imgui/libsNative/android-arm64/libimgui-moulberry90-java64.so ]; then
             echo "Android arm64 library not found!"
