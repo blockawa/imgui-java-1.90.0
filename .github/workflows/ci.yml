@@ -53,7 +53,7 @@ jobs:
 
   build-android:
     name: Build Native (android-arm64)
-    needs: []
+    needs: build-java
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
