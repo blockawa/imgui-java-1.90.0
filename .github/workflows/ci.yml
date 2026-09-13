@@ -43,9 +43,7 @@ jobs:
       - name: Copy Build Results to Temp
         run: |
           mkdir -p tmp/
-          cp imgui-app/build/libs/*.jar tmp/
           cp imgui-binding/build/libs/*.jar tmp/
-          cp imgui-lwjgl3/build/libs/*.jar tmp/
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
