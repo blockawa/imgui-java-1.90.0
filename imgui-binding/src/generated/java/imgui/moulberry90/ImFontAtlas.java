@@ -1,4 +1,4 @@
-package imgui.moulberry90;
+package imgui.moulberry90.moulberry90;
 
 import imgui.moulberry90.binding.ImGuiStructDestroyable;
 import imgui.moulberry90.type.ImInt;
@@ -727,35 +727,35 @@ public final class ImFontAtlas extends ImGuiStructDestroyable {
     //-------------------------------------------
 
     /**
-     * Build flags (see {@link imgui.flag.ImFontAtlasFlags})
+     * Build flags (see {@link imgui.moulberry90.flag.ImFontAtlasFlags})
      */
     public int getFlags() {
         return nGetFlags();
     }
 
     /**
-     * Build flags (see {@link imgui.flag.ImFontAtlasFlags})
+     * Build flags (see {@link imgui.moulberry90.flag.ImFontAtlasFlags})
      */
     public void setFlags(final int value) {
         nSetFlags(value);
     }
 
     /**
-     * Build flags (see {@link imgui.flag.ImFontAtlasFlags})
+     * Build flags (see {@link imgui.moulberry90.flag.ImFontAtlasFlags})
      */
     public void addFlags(final int flags) {
         setFlags(getFlags() | flags);
     }
 
     /**
-     * Build flags (see {@link imgui.flag.ImFontAtlasFlags})
+     * Build flags (see {@link imgui.moulberry90.flag.ImFontAtlasFlags})
      */
     public void removeFlags(final int flags) {
         setFlags(getFlags() & ~(flags));
     }
 
     /**
-     * Build flags (see {@link imgui.flag.ImFontAtlasFlags})
+     * Build flags (see {@link imgui.moulberry90.flag.ImFontAtlasFlags})
      */
     public boolean hasFlags(final int flags) {
         return (getFlags() & flags) != 0;

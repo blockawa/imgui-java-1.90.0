@@ -11,6 +11,6 @@ public final class ImGuiSelectableFlags {
     private ImGuiSelectableFlags() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiSelectableFlags_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiSelectableFlags_")
     public Void __;
 }

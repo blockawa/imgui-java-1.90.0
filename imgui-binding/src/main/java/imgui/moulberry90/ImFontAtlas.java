@@ -1,4 +1,4 @@
-package imgui.moulberry90;
+package imgui.moulberry90.moulberry90;
 
 import imgui.moulberry90.binding.ImGuiStructDestroyable;
 import imgui.moulberry90.binding.annotation.ArgValue;
@@ -359,7 +359,7 @@ public final class ImFontAtlas extends ImGuiStructDestroyable {
     //-------------------------------------------
 
     /**
-     * Build flags (see {@link imgui.flag.ImFontAtlasFlags})
+     * Build flags (see {@link imgui.moulberry90.flag.ImFontAtlasFlags})
      */
     @BindingField(isFlag = true)
     public int Flags;

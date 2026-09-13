@@ -11,6 +11,6 @@ public final class ImGuiFocusedFlags {
     private ImGuiFocusedFlags() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiFocusedFlags_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiFocusedFlags_")
     public Void __;
 }

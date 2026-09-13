@@ -19,6 +19,6 @@ public final class ImGuiTableBgTarget {
     private ImGuiTableBgTarget() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiTableBgTarget_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiTableBgTarget_")
     public Void __;
 }

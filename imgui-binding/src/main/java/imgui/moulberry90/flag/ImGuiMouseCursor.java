@@ -12,6 +12,6 @@ public final class ImGuiMouseCursor {
     private ImGuiMouseCursor() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiMouseCursor_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiMouseCursor_")
     public Void __;
 }

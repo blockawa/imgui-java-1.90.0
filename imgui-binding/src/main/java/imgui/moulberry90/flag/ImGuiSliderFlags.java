@@ -8,6 +8,6 @@ public final class ImGuiSliderFlags {
     private ImGuiSliderFlags() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiSliderFlags_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiSliderFlags_")
     public Void __;
 }

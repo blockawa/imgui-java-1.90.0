@@ -17,6 +17,6 @@ public final class ImGuiStyleVar {
     private ImGuiStyleVar() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiStyleVar_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiStyleVar_")
     public Void __;
 }

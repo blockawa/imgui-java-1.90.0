@@ -13,6 +13,6 @@ public final class ImGuiCond {
     private ImGuiCond() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiCond_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiCond_")
     public Void __;
 }

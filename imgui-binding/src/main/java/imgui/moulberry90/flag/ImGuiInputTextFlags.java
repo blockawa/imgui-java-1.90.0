@@ -11,6 +11,6 @@ public final class ImGuiInputTextFlags {
     private ImGuiInputTextFlags() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiInputTextFlags_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiInputTextFlags_")
     public Void __;
 }

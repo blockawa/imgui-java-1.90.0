@@ -1,4 +1,4 @@
-package imgui.moulberry90;
+package imgui.moulberry90.moulberry90;
 
 import imgui.moulberry90.binding.ImGuiStruct;
 
@@ -40,35 +40,35 @@ public final class ImGuiViewport extends ImGuiStruct {
     */
 
     /**
-     * See {@link imgui.flag.ImGuiViewportFlags}.
+     * See {@link imgui.moulberry90.flag.ImGuiViewportFlags}.
      */
     public int getFlags() {
         return nGetFlags();
     }
 
     /**
-     * See {@link imgui.flag.ImGuiViewportFlags}.
+     * See {@link imgui.moulberry90.flag.ImGuiViewportFlags}.
      */
     public void setFlags(final int value) {
         nSetFlags(value);
     }
 
     /**
-     * See {@link imgui.flag.ImGuiViewportFlags}.
+     * See {@link imgui.moulberry90.flag.ImGuiViewportFlags}.
      */
     public void addFlags(final int flags) {
         setFlags(getFlags() | flags);
     }
 
     /**
-     * See {@link imgui.flag.ImGuiViewportFlags}.
+     * See {@link imgui.moulberry90.flag.ImGuiViewportFlags}.
      */
     public void removeFlags(final int flags) {
         setFlags(getFlags() & ~(flags));
     }
 
     /**
-     * See {@link imgui.flag.ImGuiViewportFlags}.
+     * See {@link imgui.moulberry90.flag.ImGuiViewportFlags}.
      */
     public boolean hasFlags(final int flags) {
         return (getFlags() & flags) != 0;

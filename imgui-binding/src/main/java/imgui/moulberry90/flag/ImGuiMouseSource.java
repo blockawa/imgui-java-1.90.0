@@ -14,6 +14,6 @@ public final class ImGuiMouseSource {
     private ImGuiMouseSource() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiMouseSource", sanitizeName = "ImGuiMouseSource_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiMouseSource", sanitizeName = "ImGuiMouseSource_")
     public Void __;
 }

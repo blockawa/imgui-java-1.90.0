@@ -9,7 +9,7 @@
 //        return;
 //    }
 //
-//    jclass coordinatesClass = env->FindClass("imgui/extension/texteditor/TextEditorCoordinates");
+//    jclass coordinatesClass = env->FindClass("imgui/moulberry90/extension/texteditor/TextEditorCoordinates");
 //    coordinatesLineID = env->GetFieldID(coordinatesClass, "mLine", "I");
 //    coordinatesColumnID = env->GetFieldID(coordinatesClass, "mColumn", "I");
 //

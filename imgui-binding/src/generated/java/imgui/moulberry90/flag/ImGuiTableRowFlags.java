@@ -2,7 +2,7 @@ package imgui.moulberry90.flag;
 
 
 /**
- * Flags for {@link imgui.ImGui#tableNextRow(int)}
+ * Flags for {@link imgui.moulberry90.ImGui#tableNextRow(int)}
  */
 public final class ImGuiTableRowFlags {
     private ImGuiTableRowFlags() {

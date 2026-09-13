@@ -16,7 +16,7 @@ public final class ImGuiImplGlfwNative {
      *
      * Internal Use Only.
      * FIXME: Once Java Module System has been implemented, this function should only be exported
-     *  to the imgui.lwjgl module.
+     *  to the imgui.moulberry90.lwjgl module.
      */
     public static native void win32hideFromTaskBar(long hwndPtr); /*
         #if defined(_WIN32)

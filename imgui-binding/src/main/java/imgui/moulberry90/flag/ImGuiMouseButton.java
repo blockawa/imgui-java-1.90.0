@@ -12,6 +12,6 @@ public final class ImGuiMouseButton {
     private ImGuiMouseButton() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiMouseButton_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiMouseButton_")
     public Void __;
 }

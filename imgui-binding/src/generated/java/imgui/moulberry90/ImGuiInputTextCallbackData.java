@@ -1,4 +1,4 @@
-package imgui.moulberry90;
+package imgui.moulberry90.moulberry90;
 
 import imgui.moulberry90.binding.ImGuiStruct;
 import imgui.moulberry90.internal.ImGuiContext;

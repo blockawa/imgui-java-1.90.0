@@ -13,6 +13,6 @@ public final class ImGuiHoveredFlags {
     private ImGuiHoveredFlags() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiHoveredFlags_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiHoveredFlags_")
     public Void __;
 }

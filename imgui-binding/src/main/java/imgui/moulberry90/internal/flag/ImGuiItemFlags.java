@@ -5,7 +5,7 @@ import imgui.moulberry90.binding.annotation.BindingSource;
 
 /**
  * Transient per-window flags, reset at the beginning of the frame. For child window, inherited from parent on first Begin().
- * This is going to be exposed in imgui.h when stabilized enough.
+ * This is going to be exposed in imgui.moulberry90.h when stabilized enough.
  */
 @BindingSource
 public final class ImGuiItemFlags {

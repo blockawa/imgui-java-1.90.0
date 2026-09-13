@@ -12,6 +12,6 @@ public final class ImDrawListFlags {
     private ImDrawListFlags() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImDrawListFlags_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImDrawListFlags_")
     public Void __;
 }

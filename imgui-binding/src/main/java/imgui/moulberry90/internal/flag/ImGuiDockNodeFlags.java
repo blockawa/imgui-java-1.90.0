@@ -11,7 +11,7 @@ public final class ImGuiDockNodeFlags {
     private ImGuiDockNodeFlags() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiDockNodeFlags_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiDockNodeFlags_")
     public Void __;
 
     @BindingAstEnum(file = "ast-imgui_internal.json", qualType = "ImGuiDockNodeFlagsPrivate_", sanitizeName = "ImGuiDockNodeFlags_")

@@ -11,6 +11,6 @@ public final class ImFontAtlasFlags {
     private ImFontAtlasFlags() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImFontAtlasFlags_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImFontAtlasFlags_")
     public Void __;
 }

@@ -11,6 +11,6 @@ public final class ImGuiColorEditFlags {
     private ImGuiColorEditFlags() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiColorEditFlags_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiColorEditFlags_")
     public Void __;
 }

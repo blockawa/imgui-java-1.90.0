@@ -11,6 +11,6 @@ public final class ImGuiViewportFlags {
     private ImGuiViewportFlags() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiViewportFlags_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiViewportFlags_")
     public Void __;
 }

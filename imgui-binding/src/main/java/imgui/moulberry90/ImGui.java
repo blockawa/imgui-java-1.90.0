@@ -1,4 +1,4 @@
-package imgui.moulberry90;
+package imgui.moulberry90.moulberry90;
 
 import imgui.moulberry90.assertion.ImAssertCallback;
 import imgui.moulberry90.binding.annotation.ArgValue;
@@ -32,8 +32,8 @@ import java.util.Properties;
 @BindingSource
 @SuppressWarnings({"unused", "UnusedReturnValue"})
 public class ImGui {
-    private static final String LIB_PATH_PROP = "imgui.library.path";
-    private static final String LIB_NAME_PROP = "imgui.library.name";
+    private static final String LIB_PATH_PROP = "imgui.moulberry90.library.path";
+    private static final String LIB_NAME_PROP = "imgui.moulberry90.library.name";
     private static final String LIB_NAME_DEFAULT = "imgui-java64";
     private static final String LIB_TMP_DIR_PREFIX = "imgui-java-natives";
 
@@ -125,7 +125,7 @@ public class ImGui {
         try (InputStream is = ImGui.class.getResourceAsStream("/imgui/imgui-java.properties")) {
             if (is != null) {
                 properties.load(is);
-                return Optional.of(properties.get("imgui.java.version").toString());
+                return Optional.of(properties.get("imgui.moulberry90.java.version").toString());
             }
         } catch (IOException e) {
             throw new UncheckedIOException(e);
@@ -282,7 +282,7 @@ public class ImGui {
     public static native void ShowUserGuide();
 
     /**
-     * Get the compiled version string e.g. "1.80 WIP" (essentially the value for IMGUI_VERSION from the compiled version of imgui.cpp)
+     * Get the compiled version string e.g. "1.80 WIP" (essentially the value for IMGUI_VERSION from the compiled version of imgui.moulberry90.cpp)
      */
     @BindingMethod
     public static native String GetVersion();
@@ -930,7 +930,7 @@ public class ImGui {
     public static native float GetFrameHeightWithSpacing();
 
     // ID stack/scopes
-    // Read the FAQ (docs/FAQ.md or http://dearimgui.com/faq) for more details about how ID are handled in dear imgui.
+    // Read the FAQ (docs/FAQ.md or http://dearimgui.moulberry90.com/faq) for more details about how ID are handled in dear imgui.moulberry90.
     // - Those questions are answered and impacted by understanding of the ID stack system:
     //   - "Q: Why is my widget not reacting when I click on it?"
     //   - "Q: How can I have widgets with an empty label?"
@@ -2903,7 +2903,7 @@ public class ImGui {
     public static native void SetClipboardText(String text);
 
     // Settings/.Ini Utilities
-    // - The disk functions are automatically called if io.IniFilename != NULL (default is "imgui.ini").
+    // - The disk functions are automatically called if io.IniFilename != NULL (default is "imgui.moulberry90.ini").
     // - Set io.IniFilename to NULL to load/save manually. Read io.WantSaveIniSettings description about handling .ini saving manually.
 
     /**

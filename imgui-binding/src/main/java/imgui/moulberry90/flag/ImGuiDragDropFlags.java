@@ -11,6 +11,6 @@ public final class ImGuiDragDropFlags {
     private ImGuiDragDropFlags() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiDragDropFlags_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiDragDropFlags_")
     public Void __;
 }

@@ -19,6 +19,6 @@ public final class ImGuiChildFlags {
     private ImGuiChildFlags() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiChildFlags_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiChildFlags_")
     public Void __;
 }

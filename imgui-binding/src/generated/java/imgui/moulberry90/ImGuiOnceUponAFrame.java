@@ -1,4 +1,4 @@
-package imgui.moulberry90;
+package imgui.moulberry90.moulberry90;
 
 /**
  * Helper: Execute a block of code at maximum once a frame.

@@ -1,4 +1,4 @@
-package imgui.moulberry90;
+package imgui.moulberry90.moulberry90;
 
 import imgui.moulberry90.binding.ImGuiStruct;
 import imgui.moulberry90.binding.annotation.BindingField;
@@ -29,7 +29,7 @@ public final class ImGuiViewport extends ImGuiStruct {
     public int ID;
 
     /**
-     * See {@link imgui.flag.ImGuiViewportFlags}.
+     * See {@link imgui.moulberry90.flag.ImGuiViewportFlags}.
      */
     @BindingField(isFlag = true)
     public int Flags;

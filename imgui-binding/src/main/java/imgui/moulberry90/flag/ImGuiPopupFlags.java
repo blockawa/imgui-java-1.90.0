@@ -16,6 +16,6 @@ public final class ImGuiPopupFlags {
     private ImGuiPopupFlags() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiPopupFlags_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiPopupFlags_")
     public Void __;
 }

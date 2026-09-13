@@ -33,6 +33,6 @@ public final class ImGuiTableFlags {
     private ImGuiTableFlags() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiTableFlags_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiTableFlags_")
     public Void __;
 }

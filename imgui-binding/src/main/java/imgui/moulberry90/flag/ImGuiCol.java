@@ -11,6 +11,6 @@ public final class ImGuiCol {
     private ImGuiCol() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiCol_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiCol_")
     public Void __;
 }

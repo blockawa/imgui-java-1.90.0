@@ -11,6 +11,6 @@ public final class ImGuiTreeNodeFlags {
     private ImGuiTreeNodeFlags() {
     }
 
-    @BindingAstEnum(file = "ast-imgui.json", qualType = "ImGuiTreeNodeFlags_")
+    @BindingAstEnum(file = "ast-imgui.moulberry90.json", qualType = "ImGuiTreeNodeFlags_")
     public Void __;
 }

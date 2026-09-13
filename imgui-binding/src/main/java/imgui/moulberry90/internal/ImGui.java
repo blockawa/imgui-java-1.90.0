@@ -15,7 +15,7 @@ import imgui.moulberry90.type.ImFloat;
 import imgui.moulberry90.type.ImInt;
 
 @BindingSource
-public final class ImGui extends imgui.ImGui {
+public final class ImGui extends imgui.moulberry90.ImGui {
     /*JNI
         #include "_common.h"
         #include "_internal.h"

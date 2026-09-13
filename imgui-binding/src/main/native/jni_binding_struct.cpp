@@ -5,7 +5,7 @@ jfieldID imGuiStructPtrID;
 namespace Jni
 {
     void InitBindingStruct(JNIEnv* env) {
-        jclass jImGuiStructClass = env->FindClass("imgui/binding/ImGuiStruct");
+        jclass jImGuiStructClass = env->FindClass("imgui/moulberry90/binding/ImGuiStruct");
         imGuiStructPtrID = env->GetFieldID(jImGuiStructClass, "ptr", "J");
     }
 
