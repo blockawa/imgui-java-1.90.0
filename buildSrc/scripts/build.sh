@@ -55,6 +55,18 @@ case "$VTYPE" in
         rm -rf /tmp/imgui/android-arm64-build
         mkdir -p $JNI_DIR
 
+        echo "Regenerating AST from current imgui headers..."
+        ./gradlew generateAst || {
+            echo "ERROR: generateAst failed"
+            exit 1
+        }
+
+        echo "Regenerating Java API bindings..."
+        ./gradlew :imgui-binding:generateApi || {
+            echo "ERROR: generateApi failed"
+            exit 1
+        }
+
         echo "Generating JNI C++ sources..."
         ./gradlew :imgui-binding:classes || {
             echo "ERROR: Gradle classes task failed"
@@ -66,9 +78,6 @@ case "$VTYPE" in
         }
         echo "Generated JNI .cpp files:"
         ls $JNI_DIR/*.cpp 2>/dev/null | head -10
-
-        echo "Removing internal/ generated files (imgui API mismatch, not needed for Flashback)..."
-        rm -f $JNI_DIR/imgui_moulberry90_internal_*.cpp
 
         echo "Applying vendor patches..."
         patch -p1 -d include/imgui-node-editor < patches/imgui-node-editor-imgui-1.92-operator-star.patch || true
