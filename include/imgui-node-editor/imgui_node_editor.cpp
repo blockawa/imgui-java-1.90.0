@@ -45,13 +45,15 @@ namespace {
         rect.Max.y = IM_TRUNC(rect.Max.y);
     }
 }
+#if defined(IMGUI_VERSION_NUM) && (IMGUI_VERSION_NUM >= 19100)
 namespace ImGui {
     ImGuiKey GetKeyIndex(ImGuiKey key)
     {
         IM_ASSERT(IsNamedKey(key));
-        return key; // already the correct 'index' in modern ImGui
+        return key;
     }
 }
+#endif
 
 
 
