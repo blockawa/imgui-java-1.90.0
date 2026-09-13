@@ -109,19 +109,19 @@ case "$VTYPE" in
         mkdir -p /tmp/imgui/libsNative/android-arm64
         $CXX $LDFLAGS \
             $OBJS \
-            -o /tmp/imgui/libsNative/android-arm64/libimgui-java64.so \
+            -o /tmp/imgui/libsNative/android-arm64/libimgui-moulberry90-java64.so \
             -lm -llog -landroid || {
             echo "Linking failed"
             exit 1
         }
 
-        if [ ! -f /tmp/imgui/libsNative/android-arm64/libimgui-java64.so ]; then
+        if [ ! -f /tmp/imgui/libsNative/android-arm64/libimgui-moulberry90-java64.so ]; then
             echo "Android arm64 library not found!"
             exit 1
         fi
 
         echo "Copying Android arm64 library to destination..."
-        cp /tmp/imgui/libsNative/android-arm64/libimgui-java64.so /tmp/imgui/dst/libimgui-java64.so
+        cp /tmp/imgui/libsNative/android-arm64/libimgui-moulberry90-java64.so /tmp/imgui/dst/libimgui-moulberry90-java64.so
         echo "Android arm64 library built successfully"
         ;;
     *)
