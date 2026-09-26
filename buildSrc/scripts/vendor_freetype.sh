@@ -49,6 +49,8 @@ case "$VTYPE" in
             -DCMAKE_C_COMPILER=$CC \
             -DCMAKE_CXX_COMPILER=$CXX \
             -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+            -DCMAKE_C_FLAGS="-ffunction-sections -fdata-sections" \
+            -DCMAKE_CXX_FLAGS="-ffunction-sections -fdata-sections" \
             -DFT_DISABLE_BZIP2=ON \
             -DFT_DISABLE_BROTLI=ON \
             -DFT_DISABLE_HARFBUZZ=ON \

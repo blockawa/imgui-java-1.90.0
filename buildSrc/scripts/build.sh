@@ -47,9 +47,9 @@ case "$VTYPE" in
         CC=$TOOLCHAIN/bin/${TARGET}${API}-clang
         CXX=$TOOLCHAIN/bin/${TARGET}${API}-clang++
 
-        CFLAGS="-fPIC -DIMGUI_ENABLE_FREETYPE -Ibuild/vendor/freetype/include"
-        CXXFLAGS="$CFLAGS -std=c++17 -fno-exceptions -fno-rtti -Wno-nontrivial-memcall -Wno-vla-cxx-extension"
-        LDFLAGS="-Wl,--gc-sections -shared -static-libstdc++ -Wl,--export-dynamic -Lbuild/vendor/freetype/lib -lfreetype"
+        CFLAGS="-fPIC -ffunction-sections -fdata-sections -DIMGUI_ENABLE_FREETYPE -Ibuild/vendor/freetype/include"
+        CXXFLAGS="$CFLAGS -Os -std=c++17 -fno-exceptions -fno-rtti -Wno-nontrivial-memcall -Wno-vla-cxx-extension"
+        LDFLAGS="-Wl,--gc-sections -shared -static-libstdc++ -Lbuild/vendor/freetype/lib -lfreetype"
 
         JNI_DIR=/tmp/imgui/android-arm64-build/jni
         rm -rf /tmp/imgui/android-arm64-build
@@ -113,7 +113,7 @@ case "$VTYPE" in
             exit 1
         }
 
-        $TOOLCHAIN/bin/llvm-strip --strip-debug /tmp/imgui/libsNative/android-arm64/libimgui-moulberry90-java64.so
+        $TOOLCHAIN/bin/llvm-strip --strip-unneeded /tmp/imgui/libsNative/android-arm64/libimgui-moulberry90-java64.so
 
         echo "Verifying JNI symbols..."
         JNI_COUNT=$($TOOLCHAIN/bin/llvm-nm -D /tmp/imgui/libsNative/android-arm64/libimgui-moulberry90-java64.so 2>/dev/null | grep -c "Java_" || true)
